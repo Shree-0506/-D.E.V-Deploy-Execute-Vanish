@@ -57,74 +57,45 @@ The system architecture decouples complex machine learning tasks into specialize
 
 ---
 
-## Adversarial Defense & Anti-Spoofing Strategy
+## Fraud Prevention & Anti-Spoofing Strategy
 
-The fraud defense layer is a direct extension of our AI architecture—treating GPS as **one signal among many**, not as the ultimate ground truth. GPS spoofing by organized syndicates is a known attack vector on parametric platforms. Because weather triggers are objective and automatic, a fraud ring can easily fake their location in an affected zone to drain the liquidity pool. 
+To ensure platform sustainability, our system assumes GPS can be spoofed. Therefore, we rely on a **multi-signal behavioral approach** evaluated by our Isolation Forest model. No single anomaly triggers a rejection; instead, the system looks for an overall pattern of legitimate work.
 
-The system distinguishes a genuinely stranded delivery partner from a bad actor by comparing **behavioral consistency** across multiple signals.
+### The 3 Pillars of Verification
 
-**A legitimately affected worker typically shows:**
-* Recent delivery movement in the zone prior to the trigger.
-* A sudden operational halt whose timing aligns exactly with the weather event.
-* Realistic location transitions with no impossible velocity jumps.
-* A drop in task completion rate correlated with the external disruption.
+Instead of relying solely on coordinates, we validate claims across three dimensions:
 
-**A spoofed user typically shows:**
-* Abrupt, physically impossible location changes.
-* Static device presence with no corresponding delivery behavior.
-* Inconsistent movement patterns relative to their own 3-week behavioral baseline.
-* Near-zero accelerometer variance (indicating a stationary device at home).
+1. **Location & Movement:** We check for realistic travel trajectories and speeds leading up to the weather event, automatically flagging impossible GPS jumps or completely stationary devices.
+2. **Platform Behavior:** We verify that the user was actively engaging with the delivery app (accepting orders, normal screen time) before the disruption, rather than just turning the app on to claim a payout.
+3. **Device & Network Integrity:** We cross-reference GPS data with network types and device fingerprints to catch emulators or location-spoofing apps.
 
 ### Multi-Signal Feature Vector
 
-The Isolation Forest microservice scores the following combined feature vector. No single anomalous signal triggers a denial; instead, the model evaluates the aggregate context:
+Our Isolation Forest evaluates the following combined feature set across the three pillars. No single signal causes an automatic rejection:
 
 | Signal | What It Detects |
 | :--- | :--- |
-| **Trip trajectory continuity** | Recent movement before the halt is coherent with the claimed zone. |
-| **Timestamp consistency** | Check-in intervals are human-plausible, not systematically scripted. |
-| **App foreground activity** | Was the delivery app actively in use at the exact trigger time? |
-| **Battery / network fluctuation** | Active outdoor navigation drains battery; spoofed apps at home do not. |
-| **Order acceptance history** | Was the partner online and actively accepting Zomato/Swiggy/Zepto orders? |
-| **Speed & route plausibility** | Travel velocity falls within the bounds of physical reality. |
-| **Accelerometer / Gyroscope** | Stationary device = near-zero variance; weather-stranded partners show micro-jitter. |
-| **Cell tower triangulation delta** | Spoofed GPS often heavily mismatches the actual serving cell tower location. |
-| **Device fingerprint consistency** | Coordinated rings often reuse emulators or rooted devices with matching fingerprints. |
-| **Network type** | Relying on Home Wi-Fi during an outdoor weather event is highly anomalous. |
+| **Trip trajectory continuity** | Movement matches claimed zone |
+| **Timestamp consistency** | Human-like activity intervals |
+| **App foreground activity** | App usage at trigger time |
+| **Battery / network fluctuation** | Outdoor usage vs idle device |
+| **Order acceptance history** | Active delivery participation |
+| **Speed & route plausibility** | Realistic travel behavior |
+| **Accelerometer / Gyroscope** | Motion vs stationary device |
+| **Cell tower triangulation delta** | GPS vs network mismatch |
+| **Device fingerprint consistency** | Reused / emulator devices |
+| **Network type** | Wi-Fi vs mobile anomaly |
 
-### Coordinated Fraud Ring Detection
+### Handling Edge Cases & Syndicates
 
-Individual anomaly scoring alone is insufficient against organized rings. A parallel **cluster-level analysis** runs independently to detect:
-* Multiple simultaneous claims originating from highly similar or identical coordinates.
-* Repeated, identical device behavior patterns across multiple claimants.
-* Synchronized inactivity onset immediately after trigger activation.
-* Abnormal claim density within small geographic clusters (e.g., *200+ claims / 5 min from one pin code = automatic syndicate flag*).
-
-This prevents a coordinated ring from gaming the system by keeping individual claims just below the anomaly threshold while their aggregate pattern remains highly visible.
-
-### Fair Handling of Flagged Claims
-
-A flagged worker is **never automatically denied**. The tiered hold workflow protects honest workers who might be experiencing genuine network or GPS issues during severe weather:
-
-> **GPS Drop Grace Window:** A partner who loses GPS signal mid-shift due to severe weather is not penalized. Their last valid zone location is cached with a **15-minute grace window**. If the trigger event falls within that window, the claim is treated as zone-confirmed.
-> 
-> **Core Principle:** False negatives (paying a fraudster) are financially recoverable. False positives (wrongly denying a genuine worker in a crisis) destroy trust and cause permanent churn. The objective is **reliable trust scoring before payout release**, not aggressive denial.
+* **Syndicate Detection:** A parallel cluster analysis monitors for coordinated fraud rings, flagging impossible scenarios (e.g., 50 claims originating from the exact same stationary coordinate within 5 minutes).
+* **Fairness First (The 15-Minute Grace Period):** We recognize that severe weather causes network drops. If a worker's GPS drops out during an active storm alert, the system caches their last valid location for 15 minutes to ensure legitimate workers aren't unfairly denied their payout.
 
 ### Anti-Spoofing Decision Pipeline
 
-
-![Anti-Spoofing Decision Flow](flow1.svg)
-
-**Pipeline Breakdown:**
-1. **Trigger & Harvest:** A weather threshold is crossed. The system instantly harvests the multi-signal feature vector (GPS, accelerometer, battery state, order history). *Note: The 15-minute GPS grace cache feeds into this step.*
-2. **Syndicate Cluster Check:** The system checks for macro-level anomalies (e.g., 200+ claims in 5 minutes from one zone, or duplicated device fingerprints). 
-   * *If flagged:* Routed immediately to Manual Review.
-   * *If clean:* Proceeds to the Isolation Forest.
-3. **AI Anomaly Scoring:** The Isolation Forest evaluates the combined feature vector and assigns a risk score.
-4. **Resolution Routing:**
-   * **Low Risk:** Automatically approved. **Instant UPI Payout** executed.
-   * **Medium Risk (Soft Hold):** Payout deferred. Partner receives a 2-hour SLA notification while a 30-minute telemetry watch window opens. If signals stabilize and verify, it results in an **Auto-resolve payout**. If not, it moves to Manual Review.
-   * **High Risk:** Automatically routed to Manual Review. A reason code is assigned, and the partner has a 24-hour window to submit evidence (e.g., platform screenshots). A human analyst makes the final decision.
+<p align="center">
+  <img src="flow1.svg" width="90%" style="max-width:900px;">
+</p>
 
 ---
 
