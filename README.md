@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo.png" alt="CashUrance Logo" width="200"/>
+  <img src="assets/logo.png" alt="CashUrance Logo" width="200"/>
   
   <h1>CashUrance: AI-Powered Income Protection for Delivery Partners</h1>
   <p><b>Developed by Team D.E.V (Deploy - Execute - Vanish)</b></p>
@@ -94,7 +94,7 @@ Our Isolation Forest evaluates the following combined feature set across the thr
 ### Anti-Spoofing Decision Pipeline
 
 <p align="center">
-  <img src="flow1.svg" width="90%" style="max-width:900px;">
+  <img src="assets/flow1.svg" width="90%" style="max-width:900px;">
 </p>
 
 ---
