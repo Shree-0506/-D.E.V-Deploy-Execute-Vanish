@@ -43,7 +43,7 @@ Delivery partners operate entirely via their mobile devices. A web-based platfor
 
 ## AI & ML System: Models, Fraud Defense & Anti-Spoofing Strategy
 
-The system architecture decouples complex machine learning tasks into specialized microservices, ensuring high scalability, low latency, and strict interpretability for auditing purposes. The fraud defense layer is a direct extension of this architecture — treating GPS as **one signal among many**, not as ground truth.
+The system architecture decouples complex machine learning tasks into specialized microservices, ensuring high scalability, low latency, and strict interpretability for auditing purposes. The fraud defense layer is a direct extension of this architecture — treating GPS as **one signal among many**, not as the ultimate ground truth.
 
 ### ML Module Overview
 
@@ -55,174 +55,144 @@ The system architecture decouples complex machine learning tasks into specialize
 | **Fraud Detection** | Isolation Forest | Identifies anomalous operational behavior (GPS spoofing, impossible travel velocities) operating in parallel with a strict heuristic rule layer to prevent duplicate claims. |
 | **Risk Profiling** | K-Means Clustering | Segments the delivery fleet into structured risk tiers during onboarding to optimize initial pricing and insurer capital allocation. |
 
----
-
 ### Adversarial Defense: Differentiating Genuine Workers from Spoofers
 
-GPS spoofing by organized syndicates is a known attack vector on parametric platforms. Because weather triggers are objective and automatic, a fraud ring can fake location presence in an affected zone and drain the liquidity pool.
+GPS spoofing by organized syndicates is a known attack vector on parametric platforms. Because weather triggers are objective and automatic, a fraud ring can easily fake their location in an affected zone to drain the liquidity pool. 
 
-The system distinguishes a genuinely stranded delivery partner from a bad actor by comparing **behavioral consistency** across multiple signals, not location alone.
+The system distinguishes a genuinely stranded delivery partner from a bad actor by comparing **behavioral consistency** across multiple signals, rather than relying on location alone.
 
 **A legitimately affected worker typically shows:**
-- Recent delivery movement in the zone prior to the trigger
-- A sudden operational halt whose timing matches the weather event
-- Realistic location transitions with no impossible velocity jumps
-- A drop in task completion rate correlated with the external disruption
+* Recent delivery movement in the zone prior to the trigger.
+* A sudden operational halt whose timing aligns exactly with the weather event.
+* Realistic location transitions with no impossible velocity jumps.
+* A drop in task completion rate correlated with the external disruption.
 
 **A spoofed user typically shows:**
-- Abrupt, physically impossible location changes
-- Static device presence with no corresponding delivery behavior
-- Inconsistent movement patterns relative to their own 3-week behavioral baseline
-- Near-zero accelerometer variance (stationary device at home)
-
----
+* Abrupt, physically impossible location changes.
+* Static device presence with no corresponding delivery behavior.
+* Inconsistent movement patterns relative to their own 3-week behavioral baseline.
+* Near-zero accelerometer variance (indicating a stationary device at home).
 
 ### Multi-Signal Feature Vector
 
-The Isolation Forest microservice scores the following combined feature vector. No single anomalous signal triggers a denial — the model evaluates the aggregate:
+The Isolation Forest microservice scores the following combined feature vector. No single anomalous signal triggers a denial; instead, the model evaluates the aggregate context:
 
 | Signal | What It Detects |
 | :--- | :--- |
-| Trip trajectory continuity | Recent movement before halt is coherent with claimed zone |
-| Timestamp consistency | Check-in intervals are human-plausible, not scripted |
-| App foreground activity | Was the delivery app actively in use at trigger time? |
-| Battery / network fluctuation | Active outdoor navigation drains battery; spoofed apps at home do not |
-| Platform order acceptance history | Was the partner online and accepting orders on Zomato/Swiggy/Zepto? |
-| Speed and route plausibility | Travel velocity falls within physical bounds |
-| Accelerometer / gyroscope variance | Stationary device = near-zero; weather-stranded partner shows micro-jitter |
-| Cell tower triangulation delta | Spoofed GPS often mismatches the actual serving cell tower location |
-| Device fingerprint consistency | Coordinated rings reuse emulators or rooted devices with matching fingerprints |
-| Network type | Home Wi-Fi during an outdoor weather event is anomalous |
-
----
+| **Trip trajectory continuity** | Recent movement before the halt is coherent with the claimed zone. |
+| **Timestamp consistency** | Check-in intervals are human-plausible, not systematically scripted. |
+| **App foreground activity** | Was the delivery app actively in use at the exact trigger time? |
+| **Battery / network fluctuation** | Active outdoor navigation drains battery; spoofed apps at home do not. |
+| **Order acceptance history** | Was the partner online and actively accepting Zomato/Swiggy/Zepto orders? |
+| **Speed & route plausibility** | Travel velocity falls within the bounds of physical reality. |
+| **Accelerometer / Gyroscope** | Stationary device = near-zero variance; weather-stranded partners show micro-jitter. |
+| **Cell tower triangulation delta** | Spoofed GPS often heavily mismatches the actual serving cell tower location. |
+| **Device fingerprint consistency** | Coordinated rings often reuse emulators or rooted devices with matching fingerprints. |
+| **Network type** | Relying on Home Wi-Fi during an outdoor weather event is highly anomalous. |
 
 ### Coordinated Fraud Ring Detection
 
 Individual anomaly scoring alone is insufficient against organized rings. A parallel **cluster-level analysis** runs independently to detect:
+* Multiple simultaneous claims originating from highly similar or identical coordinates.
+* Repeated, identical device behavior patterns across multiple claimants.
+* Synchronized inactivity onset immediately after trigger activation.
+* Abnormal claim density within small geographic clusters (e.g., *200+ claims / 5 min from one pin code = automatic syndicate flag*).
 
-- Multiple simultaneous claims from highly similar coordinates
-- Repeated identical device behavior patterns across claimants
-- Synchronized inactivity onset immediately after trigger activation
-- Abnormal claim density within small geographic clusters (200+ claims / 5 min from one pin code = syndicate flag)
-
-This prevents a ring from gaming the system by keeping each individual claim just below the anomaly threshold while the aggregate pattern remains detectable.
-
----
+This prevents a coordinated ring from gaming the system by keeping individual claims just below the anomaly threshold while their aggregate pattern remains highly visible.
 
 ### Fair Handling of Flagged Claims
 
-A flagged worker is **never automatically denied**. The tiered hold workflow protects honest workers experiencing genuine network issues during severe weather:
+A flagged worker is **never automatically denied**. The tiered hold workflow protects honest workers who might be experiencing genuine network or GPS issues during severe weather:
 
-| Risk Tier | Action |
+| Risk Tier | System Action |
 | :--- | :--- |
-| **Low risk** | Claim proceeds normally; payout executes immediately |
-| **Medium risk** | Payout deferred; 30-minute telemetry watch window opens; auto-resolves if signals stabilize |
-| **High risk** | Enters secondary review with a reason code; partner notified with a 24-hour window to submit platform activity evidence |
+| **Low Risk** | Claim proceeds normally; payout executes immediately. |
+| **Medium Risk** | Payout deferred; 30-minute telemetry watch window opens; auto-resolves if signals stabilize. |
+| **High Risk** | Enters secondary review with a reason code; partner is notified with a 24-hour window to submit platform activity evidence. |
 
-**GPS drop grace window:** A partner who loses GPS signal mid-shift due to bad weather is not penalized. Their last valid zone location is cached with a **15-minute grace window**. If the trigger event falls within that window, the claim is treated as zone-confirmed.
-
-> **Core principle:** False negatives (paying a fraudster) are financially recoverable. False positives (wrongly denying a genuine worker in a crisis) destroy trust and cause permanent churn. The objective is **reliable trust scoring before payout release**, not aggressive denial.
-
----
+> **GPS Drop Grace Window:** A partner who loses GPS signal mid-shift due to severe weather is not penalized. Their last valid zone location is cached with a **15-minute grace window**. If the trigger event falls within that window, the claim is treated as zone-confirmed.
+> 
+> **Core Principle:** False negatives (paying a fraudster) are financially recoverable. False positives (wrongly denying a genuine worker in a crisis) destroy trust and cause permanent churn. The objective is **reliable trust scoring before payout release**, not aggressive denial.
 
 ### Anti-Spoofing Decision Flow
 
 ```mermaid
-flowchart LR
-    A([Weather trigger\nThreshold crossed]) --> B
+graph LR
+    %% Theme and Class Definitions
+    classDef triggerNode fill:#2d333b,stroke:#8b949e,stroke-width:1px,color:#c9d1d9,rx:15px,ry:15px;
+    classDef darkBox fill:#22272e,stroke:#444c56,stroke-width:1px,color:#adbac7;
+    classDef decisionBox fill:#22272e,shape:diamond,stroke:#444c56,stroke-width:1px,color:#adbac7;
+    classDef successNode fill:#238636,stroke:#none,color:#ffffff,rx:15px,ry:15px;
+    classDef graceNode fill:#22272e,stroke:#8b949e,stroke-dasharray: 5 5,color:#adbac7,rx:15px,ry:15px;
+    classDef humanNode fill:#1f6feb,stroke:#none,color:#ffffff,rx:15px,ry:15px;
 
-    subgraph HARVEST [" Signal Harvest "]
-        B[GPS + trajectory\ncontinuity]
-        C[Accelerometer\n& cell tower]
-        D[App foreground\n& battery state]
-        E[Platform order\nacceptance history]
+    %% Independent Triggers
+    WEATHER([Weather trigger<br/>Threshold crossed]):::triggerNode
+    GRACE([GPS drop grace<br/>Last zone cached · 15 min]):::graceNode
+
+    %% Subgraph: Signal Harvest
+    subgraph HARVEST [Signal Harvest]
+        B[GPS + trajectory<br/>continuity]:::darkBox
+        C[Accelerometer<br/>& cell tower]:::darkBox
+        D[App foreground<br/>& battery state]:::darkBox
+        E[Platform order<br/>acceptance history]:::darkBox
     end
+
+    %% Subgraph: Cluster Check
+    subgraph CLUSTER [Cluster Check]
+        H[Zone velocity<br/>200+ claims / 5 min]:::darkBox
+        I[Device fingerprint<br/>duplication]:::darkBox
+        J{Syndicate<br/>flag?}:::decisionBox
+    end
+
+    %% Subgraph: Isolation Forest
+    subgraph MODEL [Isolation Forest]
+        F[Combined<br/>feature vector]:::darkBox
+        G{Anomaly<br/>score?}:::decisionBox
+    end
+
+    %% Subgraph: Soft Hold
+    subgraph HOLD_BLOCK [Soft Hold]
+        HOLD[Notify partner<br/>2-hr SLA]:::darkBox
+        WATCH{30-min telemetry<br/>consistent?}:::decisionBox
+    end
+
+    %% Subgraph: Manual Review
+    subgraph REVIEW_BLOCK [Manual Review]
+        REV[Reason code assigned]:::darkBox
+        EVID[Partner submits<br/>24-hr evidence window]:::darkBox
+        ANALYST([Human analyst decision]):::humanNode
+    end
+
+    %% Payout Nodes
+    PAY1([✓ Instant UPI payout]):::successNode
+    PAY2([✓ Auto-resolve payout]):::successNode
+
+    %% Logic Connections
+    WEATHER --> B & C & D & E
+    H & I --> J
+    
+    J -- No --> F
+    J -- Yes --> REV
 
     B & C & D & E --> F
+    GRACE -. feeds .-> F
 
-    subgraph MODEL [" Isolation Forest "]
-        F[Combined\nfeature vector]
-        F --> G{Anomaly\nscore?}
-    end
+    F --> G
 
-    subgraph CLUSTER [" Cluster Check "]
-        H[Zone velocity\n200+ claims / 5 min]
-        I[Device fingerprint\nduplication]
-        H & I --> J{Syndicate\nflag?}
-    end
+    G -- Low --> PAY1
+    G -- Medium --> HOLD
+    G -- High --> REV
 
-    J -->|No| G
-    J -->|Yes| REVIEW
+    HOLD --> WATCH
+    WATCH -- Yes --> PAY2
+    WATCH -- No --> REV
 
-    G -->|Low| PAY([✓ Instant UPI payout])
-    G -->|Medium| HOLD
+    REV --> EVID --> ANALYST
 
-    subgraph HOLD_BLOCK [" Soft Hold "]
-        HOLD[Notify partner\n2-hr SLA]
-        HOLD --> WATCH{30-min telemetry\nconsistent?}
-        WATCH -->|Yes| PAY2([✓ Auto-resolve payout])
-        WATCH -->|No| REVIEW
-    end
-
-    G -->|High| REVIEW
-
-    subgraph REVIEW_BLOCK [" Manual Review "]
-        REVIEW[Reason code assigned]
-        REVIEW --> EVIDENCE[Partner submits\n24-hr evidence window]
-        EVIDENCE --> ANALYST([Human analyst decision])
-    end
-
-    GPS_GRACE([GPS drop grace\nLast zone cached · 15 min]) -.->|feeds| F
-
-    style PAY fill:#1D9E75,color:#fff,stroke:none
-    style PAY2 fill:#1D9E75,color:#fff,stroke:none
-    style ANALYST fill:#085041,color:#fff,stroke:none
-    style HARVEST fill:#f0faf5,stroke:#0F6E56,stroke-width:1.5px,color:#085041
-    style MODEL fill:#f5f0ff,stroke:#7F77DD,stroke-width:1.5px,color:#26215C
-    style CLUSTER fill:#fff8e6,stroke:#BA7517,stroke-width:1.5px,color:#412402
-    style HOLD_BLOCK fill:#fff8e6,stroke:#BA7517,stroke-width:1.5px,color:#412402
-    style REVIEW_BLOCK fill:#fdf0ee,stroke:#993C1D,stroke-width:1.5px,color:#4A1B0C
-```
-
----
-
-## Technical Stack
-
-* **UI/UX Interface:** Figma
-* **Client Application:** React Native (Cross-platform mobile application)
-* **Backend API Gateway:** Node.js / Express
-* **AI/ML Microservices:** Python (FastAPI, Scikit-learn, CatBoost)
-* **Event Routing:** Redis Pub/Sub (Asynchronous processing for weather triggers)
-* **Database Infrastructure:** PostgreSQL (Relational user & policy data) + MongoDB (Raw API telemetry & location data)
-* **External Integrations:** OpenWeather API (Mocked), Razorpay/Stripe Test Environment (Payouts)
-
----
-
-## Development Roadmap (6-Week Timeline)
-
-* **Phase 1 (Weeks 1-2): Ideation & Foundation**
-  * Finalize persona constraints and exact parametric triggers.
-  * Design high-fidelity UI/UX wireframes.
-  * Document system architecture and ML pipelines.
-* **Phase 2 (Weeks 3-4): Automation & Protection**
-  * Develop the mobile client (Registration & Weekly Policy Management).
-  * Train and deploy the CatBoost predictive premium service.
-  * Integrate mock APIs and deploy the Rule-Based Parametric Trigger.
-* **Phase 3 (Weeks 5-6): Scale & Optimize**
-  * Implement the Isolation Forest Fraud Detection microservice.
-  * Integrate mock UPI payment gateways for end-to-end payout simulation.
-  * Develop the Insurer Analytics Dashboard for administrative oversight.
-
----
-
-## Phase 1 Deliverables
-
-* **GitHub Repository:** [Link to this Repo](#)
-* **Strategy & Prototype Pitch Video (2-mins):** [Insert YouTube/Drive Link Here](#)
-
----
-
-<div align="center">
-  <i>Deploy - Execute - Vanish</i><br>
-  <b>Team D.E.V</b>
-</div>
+    %% Subgraph Styling for Pastel Backgrounds
+    style HARVEST fill:#e6f4ea,stroke:#1e8e3e,stroke-width:2px,color:#0b5323
+    style CLUSTER fill:#fef7e0,stroke:#f9ab00,stroke-width:2px,color:#5c3e00
+    style MODEL fill:#f3f0ff,stroke:#7f77dd,stroke-width:2px,color:#26215c
+    style HOLD_BLOCK fill:#fef7e0,stroke:#f9ab00,stroke-width:2px,color:#5c3e00
+    style REVIEW_BLOCK fill:#fce8e6,stroke:#d93025,stroke-width:2px,color:#7a1a10
