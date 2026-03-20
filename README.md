@@ -112,9 +112,8 @@ A flagged worker is **never automatically denied**. The tiered hold workflow pro
 
 ### Anti-Spoofing Decision Pipeline
 
-*(Insert your high-resolution Figma flowchart image below by replacing the file path)*
 
-![Anti-Spoofing Decision Flow](path/to/your/figma-export.png)
+![Anti-Spoofing Decision Flow](flow1.svg)
 
 **Pipeline Breakdown:**
 1. **Trigger & Harvest:** A weather threshold is crossed. The system instantly harvests the multi-signal feature vector (GPS, accelerometer, battery state, order history). *Note: The 15-minute GPS grace cache feeds into this step.*
