@@ -1,278 +1,202 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1445pt" height="1347pt" viewBox="0.00 0.00 1445.00 1347.00">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 1318.63)">
-<title>AntiSpoofingFlow</title>
-<polygon fill="white" stroke="none" points="-28.8,28.8 -28.8,-1318.63 1415.8,-1318.63 1415.8,28.8 -28.8,28.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1145pt" height="868pt" viewBox="0.00 0.00 1145.00 868.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 831.67)">
+<title>FraudPreventionFlow</title>
+<polygon fill="white" stroke="none" points="-36,36 -36,-831.67 1108.94,-831.67 1108.94,36 -36,36"/>
 <g id="clust1" class="cluster">
-<title>cluster_1</title>
-<path fill="none" stroke="#22c55e" d="M20,-1051.08C20,-1051.08 651,-1051.08 651,-1051.08 657,-1051.08 663,-1057.08 663,-1063.08 663,-1063.08 663,-1123.08 663,-1123.08 663,-1129.08 657,-1135.08 651,-1135.08 651,-1135.08 20,-1135.08 20,-1135.08 14,-1135.08 8,-1129.08 8,-1123.08 8,-1123.08 8,-1063.08 8,-1063.08 8,-1057.08 14,-1051.08 20,-1051.08"/>
-<text xml:space="preserve" text-anchor="middle" x="335.5" y="-1118.48" font-family="Helvetica,sans-Serif" font-size="14.00">Signal Input</text>
+<title>cluster_pillars</title>
+<path fill="none" stroke="#94a3b8" stroke-dasharray="5,2" d="M337.94,-540.8C337.94,-540.8 1052.94,-540.8 1052.94,-540.8 1058.94,-540.8 1064.94,-546.8 1064.94,-552.8 1064.94,-552.8 1064.94,-653.6 1064.94,-653.6 1064.94,-659.6 1058.94,-665.6 1052.94,-665.6 1052.94,-665.6 337.94,-665.6 337.94,-665.6 331.94,-665.6 325.94,-659.6 325.94,-653.6 325.94,-653.6 325.94,-552.8 325.94,-552.8 325.94,-546.8 331.94,-540.8 337.94,-540.8"/>
+<text xml:space="preserve" text-anchor="middle" x="695.44" y="-649" font-family="Arial" font-size="14.00" fill="#475569">The 3 Pillars of Verification (Multi-Signal Input)</text>
 </g>
 <g id="clust2" class="cluster">
-<title>cluster_2</title>
-<path fill="none" stroke="#eab308" d="M1036,-1029.48C1036,-1029.48 1367,-1029.48 1367,-1029.48 1373,-1029.48 1379,-1035.48 1379,-1041.48 1379,-1041.48 1379,-1269.83 1379,-1269.83 1379,-1275.83 1373,-1281.83 1367,-1281.83 1367,-1281.83 1036,-1281.83 1036,-1281.83 1030,-1281.83 1024,-1275.83 1024,-1269.83 1024,-1269.83 1024,-1041.48 1024,-1041.48 1024,-1035.48 1030,-1029.48 1036,-1029.48"/>
-<text xml:space="preserve" text-anchor="middle" x="1201.5" y="-1265.23" font-family="Helvetica,sans-Serif" font-size="14.00">Cluster Check</text>
-</g>
-<g id="clust3" class="cluster">
-<title>cluster_3</title>
-<path fill="none" stroke="#a855f7" d="M510,-733.28C510,-733.28 760,-733.28 760,-733.28 766,-733.28 772,-739.28 772,-745.28 772,-745.28 772,-964.68 772,-964.68 772,-970.68 766,-976.68 760,-976.68 760,-976.68 510,-976.68 510,-976.68 504,-976.68 498,-970.68 498,-964.68 498,-964.68 498,-745.28 498,-745.28 498,-739.28 504,-733.28 510,-733.28"/>
-<text xml:space="preserve" text-anchor="middle" x="635" y="-960.08" font-family="Helvetica,sans-Serif" font-size="14.00">Anomaly Model</text>
-</g>
-<g id="clust4" class="cluster">
-<title>cluster_4</title>
-<path fill="none" stroke="#eab308" d="M356,-408.19C356,-408.19 610,-408.19 610,-408.19 616,-408.19 622,-414.19 622,-420.19 622,-420.19 622,-664.34 622,-664.34 622,-670.34 616,-676.34 610,-676.34 610,-676.34 356,-676.34 356,-676.34 350,-676.34 344,-670.34 344,-664.34 344,-664.34 344,-420.19 344,-420.19 344,-414.19 350,-408.19 356,-408.19"/>
-<text xml:space="preserve" text-anchor="middle" x="483" y="-659.74" font-family="Helvetica,sans-Serif" font-size="14.00">Soft Hold</text>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_5</title>
-<path fill="none" stroke="#ef4444" d="M823,-8C823,-8 973,-8 973,-8 979,-8 985,-14 985,-20 985,-20 985,-339.24 985,-339.24 985,-345.24 979,-351.24 973,-351.24 973,-351.24 823,-351.24 823,-351.24 817,-351.24 811,-345.24 811,-339.24 811,-339.24 811,-20 811,-20 811,-14 817,-8 823,-8"/>
-<text xml:space="preserve" text-anchor="middle" x="898" y="-334.64" font-family="Helvetica,sans-Serif" font-size="14.00">Manual Review</text>
+<title>cluster_engines</title>
+<path fill="none" stroke="#cbd5e1" d="M262.94,-280C262.94,-280 775.94,-280 775.94,-280 781.94,-280 787.94,-286 787.94,-292 787.94,-292 787.94,-361.6 787.94,-361.6 787.94,-367.6 781.94,-373.6 775.94,-373.6 775.94,-373.6 262.94,-373.6 262.94,-373.6 256.94,-373.6 250.94,-367.6 250.94,-361.6 250.94,-361.6 250.94,-292 250.94,-292 250.94,-286 256.94,-280 262.94,-280"/>
+<text xml:space="preserve" text-anchor="middle" x="519.44" y="-357" font-family="Arial" font-size="14.00" fill="#475569">Evaluation Engines</text>
 </g>
 <!-- Weather -->
 <g id="node1" class="node">
 <title>Weather</title>
-<ellipse fill="#f1f5f9" stroke="#cbd5e1" cx="323" cy="-1227.43" rx="117.41" ry="30.55"/>
-<text xml:space="preserve" text-anchor="middle" x="323" y="-1222.03" font-family="Helvetica,sans-Serif" font-size="18.00">Weather Trigger</text>
+<ellipse fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" cx="518.94" cy="-758.34" rx="159.32" ry="37.34"/>
+<text xml:space="preserve" text-anchor="middle" x="518.94" y="-762.24" font-family="Arial" font-size="13.00">Weather Disruption Trigger</text>
+<text xml:space="preserve" text-anchor="middle" x="518.94" y="-746.64" font-family="Arial" font-size="13.00">(e.g., Severe Waterlogging Alert)</text>
 </g>
-<!-- B -->
-<g id="node3" class="node">
-<title>B</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M120.02,-1102.28C120.02,-1102.28 27.98,-1102.28 27.98,-1102.28 21.98,-1102.28 15.98,-1096.28 15.98,-1090.28 15.98,-1090.28 15.98,-1071.08 15.98,-1071.08 15.98,-1065.08 21.98,-1059.08 27.98,-1059.08 27.98,-1059.08 120.02,-1059.08 120.02,-1059.08 126.02,-1059.08 132.02,-1065.08 132.02,-1071.08 132.02,-1071.08 132.02,-1090.28 132.02,-1090.28 132.02,-1096.28 126.02,-1102.28 120.02,-1102.28"/>
-<text xml:space="preserve" text-anchor="middle" x="74" y="-1075.28" font-family="Helvetica,sans-Serif" font-size="18.00">GPS Path</text>
-</g>
-<!-- Weather&#45;&gt;B -->
-<g id="edge1" class="edge">
-<title>Weather-&gt;B</title>
-<path fill="none" stroke="#475569" d="M273.81,-1199.32C241.56,-1181.39 198.57,-1157.19 161,-1135.08 146.74,-1126.69 131.32,-1117.32 117.47,-1108.8"/>
-<polygon fill="#475569" stroke="#475569" points="119.34,-1105.84 108.99,-1103.57 115.66,-1111.8 119.34,-1105.84"/>
-</g>
-<!-- C -->
-<g id="node4" class="node">
-<title>C</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M319.77,-1102.28C319.77,-1102.28 202.23,-1102.28 202.23,-1102.28 196.23,-1102.28 190.23,-1096.28 190.23,-1090.28 190.23,-1090.28 190.23,-1071.08 190.23,-1071.08 190.23,-1065.08 196.23,-1059.08 202.23,-1059.08 202.23,-1059.08 319.77,-1059.08 319.77,-1059.08 325.77,-1059.08 331.77,-1065.08 331.77,-1071.08 331.77,-1071.08 331.77,-1090.28 331.77,-1090.28 331.77,-1096.28 325.77,-1102.28 319.77,-1102.28"/>
-<text xml:space="preserve" text-anchor="middle" x="261" y="-1075.28" font-family="Helvetica,sans-Serif" font-size="18.00">Motion + Cell</text>
-</g>
-<!-- Weather&#45;&gt;C -->
-<g id="edge2" class="edge">
-<title>Weather-&gt;C</title>
-<path fill="none" stroke="#475569" d="M310.3,-1196.79C299.81,-1172.29 284.96,-1137.62 274.3,-1112.74"/>
-<polygon fill="#475569" stroke="#475569" points="277.63,-1111.61 270.47,-1103.8 271.19,-1114.37 277.63,-1111.61"/>
-</g>
-<!-- D -->
-<g id="node5" class="node">
-<title>D</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M492.53,-1102.28C492.53,-1102.28 401.47,-1102.28 401.47,-1102.28 395.47,-1102.28 389.47,-1096.28 389.47,-1090.28 389.47,-1090.28 389.47,-1071.08 389.47,-1071.08 389.47,-1065.08 395.47,-1059.08 401.47,-1059.08 401.47,-1059.08 492.53,-1059.08 492.53,-1059.08 498.53,-1059.08 504.53,-1065.08 504.53,-1071.08 504.53,-1071.08 504.53,-1090.28 504.53,-1090.28 504.53,-1096.28 498.53,-1102.28 492.53,-1102.28"/>
-<text xml:space="preserve" text-anchor="middle" x="447" y="-1075.28" font-family="Helvetica,sans-Serif" font-size="18.00">App State</text>
-</g>
-<!-- Weather&#45;&gt;D -->
-<g id="edge3" class="edge">
-<title>Weather-&gt;D</title>
-<path fill="none" stroke="#475569" d="M348.09,-1197.14C369.52,-1172.12 400.2,-1136.31 421.69,-1111.22"/>
-<polygon fill="#475569" stroke="#475569" points="424.33,-1113.53 428.17,-1103.66 419.01,-1108.97 424.33,-1113.53"/>
-</g>
-<!-- E -->
-<g id="node6" class="node">
-<title>E</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M643,-1102.28C643,-1102.28 575,-1102.28 575,-1102.28 569,-1102.28 563,-1096.28 563,-1090.28 563,-1090.28 563,-1071.08 563,-1071.08 563,-1065.08 569,-1059.08 575,-1059.08 575,-1059.08 643,-1059.08 643,-1059.08 649,-1059.08 655,-1065.08 655,-1071.08 655,-1071.08 655,-1090.28 655,-1090.28 655,-1096.28 649,-1102.28 643,-1102.28"/>
-<text xml:space="preserve" text-anchor="middle" x="609" y="-1075.28" font-family="Helvetica,sans-Serif" font-size="18.00">History</text>
-</g>
-<!-- Weather&#45;&gt;E -->
-<g id="edge4" class="edge">
-<title>Weather-&gt;E</title>
-<path fill="none" stroke="#475569" d="M389.35,-1201.87C431.79,-1185.16 487.41,-1161.36 534,-1135.08 547.42,-1127.51 561.37,-1118.07 573.55,-1109.23"/>
-<polygon fill="#475569" stroke="#475569" points="575.3,-1112.3 581.26,-1103.54 571.14,-1106.67 575.3,-1112.3"/>
-</g>
-<!-- GPSGrace -->
+<!-- Grace -->
 <g id="node2" class="node">
-<title>GPSGrace</title>
-<ellipse fill="#f1f5f9" stroke="#cbd5e1" stroke-dasharray="5,2" cx="854" cy="-1080.68" rx="140.75" ry="30.55"/>
-<text xml:space="preserve" text-anchor="middle" x="854" y="-1075.28" font-family="Helvetica,sans-Serif" font-size="18.00">GPS Grace (15 min)</text>
+<title>Grace</title>
+<polygon fill="#fef08a" stroke="#ca8a04" points="269.88,-617.2 0,-617.2 0,-564.4 275.88,-564.4 275.88,-611.2 269.88,-617.2"/>
+<polyline fill="none" stroke="#ca8a04" points="269.88,-617.2 269.88,-611.2"/>
+<polyline fill="none" stroke="#ca8a04" points="275.88,-611.2 269.88,-611.2"/>
+<text xml:space="preserve" text-anchor="middle" x="137.94" y="-594.7" font-family="Arial" font-size="13.00">15-Min GPS Grace Period</text>
+<text xml:space="preserve" text-anchor="middle" x="137.94" y="-579.1" font-family="Arial" font-size="13.00">(Utilizes cached location if network drops)</text>
 </g>
-<!-- F -->
-<g id="node10" class="node">
-<title>F</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M674.53,-943.88C674.53,-943.88 543.47,-943.88 543.47,-943.88 537.47,-943.88 531.47,-937.88 531.47,-931.88 531.47,-931.88 531.47,-912.68 531.47,-912.68 531.47,-906.68 537.47,-900.68 543.47,-900.68 543.47,-900.68 674.53,-900.68 674.53,-900.68 680.53,-900.68 686.53,-906.68 686.53,-912.68 686.53,-912.68 686.53,-931.88 686.53,-931.88 686.53,-937.88 680.53,-943.88 674.53,-943.88"/>
-<text xml:space="preserve" text-anchor="middle" x="609" y="-916.88" font-family="Helvetica,sans-Serif" font-size="18.00">Feature Vector</text>
+<!-- Weather&#45;&gt;Grace -->
+<g id="edge1" class="edge">
+<title>Weather-&gt;Grace</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="5,2" d="M443.67,-724.63C375.12,-694.85 274.68,-651.21 207.86,-622.18"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="209.67,-619.15 199.1,-618.37 206.88,-625.57 209.67,-619.15"/>
+<text xml:space="preserve" text-anchor="middle" x="387.26" y="-677.2" font-family="Arial" font-size="12.00"> Network loss</text>
 </g>
-<!-- GPSGrace&#45;&gt;F -->
-<g id="edge13" class="edge">
-<title>GPSGrace-&gt;F</title>
-<path fill="none" stroke="#475569" stroke-dasharray="5,2" d="M809.63,-1051.36C764.76,-1022.72 695.89,-978.75 651.65,-950.51"/>
-<polygon fill="#475569" stroke="#475569" points="653.64,-947.63 643.33,-945.2 649.87,-953.53 653.64,-947.63"/>
+<!-- P1 -->
+<g id="node3" class="node">
+<title>P1</title>
+<path fill="#eff6ff" stroke="#3b82f6" d="M529.91,-632.8C529.91,-632.8 345.96,-632.8 345.96,-632.8 339.96,-632.8 333.96,-626.8 333.96,-620.8 333.96,-620.8 333.96,-560.8 333.96,-560.8 333.96,-554.8 339.96,-548.8 345.96,-548.8 345.96,-548.8 529.91,-548.8 529.91,-548.8 535.91,-548.8 541.91,-554.8 541.91,-560.8 541.91,-560.8 541.91,-620.8 541.91,-620.8 541.91,-626.8 535.91,-632.8 529.91,-632.8"/>
+<text xml:space="preserve" text-anchor="middle" x="437.94" y="-610.3" font-family="Arial" font-size="13.00">1. Location &amp; Movement</text>
+<text xml:space="preserve" text-anchor="middle" x="437.94" y="-594.7" font-family="Arial" font-size="13.00">• Trajectory Continuity</text>
+<text xml:space="preserve" text-anchor="middle" x="437.94" y="-579.1" font-family="Arial" font-size="13.00">• Speed &amp; Route Plausibility</text>
+<text xml:space="preserve" text-anchor="middle" x="437.94" y="-563.5" font-family="Arial" font-size="13.00">• Accelerometer / Gyroscope</text>
 </g>
-<!-- B&#45;&gt;F -->
-<g id="edge9" class="edge">
-<title>B-&gt;F</title>
-<path fill="none" stroke="#475569" d="M105.11,-1058.77C121.22,-1048.72 141.55,-1037.21 161,-1029.48 280.99,-981.83 427.9,-952.03 520,-936.53"/>
-<polygon fill="#475569" stroke="#475569" points="520.45,-940 529.74,-934.91 519.3,-933.1 520.45,-940"/>
+<!-- Weather&#45;&gt;P1 -->
+<g id="edge2" class="edge">
+<title>Weather-&gt;P1</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M500.96,-720.6C489.87,-697.93 475.47,-668.5 463.24,-643.5"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="466.48,-642.17 458.94,-634.72 460.19,-645.24 466.48,-642.17"/>
 </g>
-<!-- C&#45;&gt;F -->
-<g id="edge10" class="edge">
-<title>C-&gt;F</title>
-<path fill="none" stroke="#475569" d="M300.69,-1058.8C318.66,-1049.54 340.26,-1038.68 360,-1029.48 422.83,-1000.19 495.93,-969.4 546.6,-948.56"/>
-<polygon fill="#475569" stroke="#475569" points="547.73,-951.87 555.66,-944.84 545.08,-945.4 547.73,-951.87"/>
+<!-- P2 -->
+<g id="node4" class="node">
+<title>P2</title>
+<path fill="#eff6ff" stroke="#3b82f6" d="M787.58,-632.8C787.58,-632.8 612.3,-632.8 612.3,-632.8 606.3,-632.8 600.3,-626.8 600.3,-620.8 600.3,-620.8 600.3,-560.8 600.3,-560.8 600.3,-554.8 606.3,-548.8 612.3,-548.8 612.3,-548.8 787.58,-548.8 787.58,-548.8 793.58,-548.8 799.58,-554.8 799.58,-560.8 799.58,-560.8 799.58,-620.8 799.58,-620.8 799.58,-626.8 793.58,-632.8 787.58,-632.8"/>
+<text xml:space="preserve" text-anchor="middle" x="699.94" y="-610.3" font-family="Arial" font-size="13.00">2. Platform Behavior</text>
+<text xml:space="preserve" text-anchor="middle" x="699.94" y="-594.7" font-family="Arial" font-size="13.00">• App Foreground Activity</text>
+<text xml:space="preserve" text-anchor="middle" x="699.94" y="-579.1" font-family="Arial" font-size="13.00">• Order Acceptance History</text>
+<text xml:space="preserve" text-anchor="middle" x="699.94" y="-563.5" font-family="Arial" font-size="13.00">• Timestamp Consistency</text>
 </g>
-<!-- D&#45;&gt;F -->
-<g id="edge11" class="edge">
-<title>D-&gt;F</title>
-<path fill="none" stroke="#475569" d="M468.85,-1058.59C497.31,-1031.11 547.2,-982.95 579.14,-952.11"/>
-<polygon fill="#475569" stroke="#475569" points="581.39,-954.8 586.15,-945.34 576.53,-949.77 581.39,-954.8"/>
+<!-- Weather&#45;&gt;P2 -->
+<g id="edge3" class="edge">
+<title>Weather-&gt;P2</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M558.21,-721.42C583.94,-697.89 617.89,-666.84 646.12,-641.02"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="648.32,-643.75 653.34,-634.42 643.6,-638.58 648.32,-643.75"/>
 </g>
-<!-- E&#45;&gt;F -->
-<g id="edge12" class="edge">
-<title>E-&gt;F</title>
-<path fill="none" stroke="#475569" d="M609,-1058.59C609,-1032.16 609,-986.61 609,-955.73"/>
-<polygon fill="#475569" stroke="#475569" points="612.5,-955.8 609,-945.8 605.5,-955.8 612.5,-955.8"/>
+<!-- P3 -->
+<g id="node5" class="node">
+<title>P3</title>
+<path fill="#eff6ff" stroke="#3b82f6" d="M1044.55,-632.8C1044.55,-632.8 869.32,-632.8 869.32,-632.8 863.32,-632.8 857.32,-626.8 857.32,-620.8 857.32,-620.8 857.32,-560.8 857.32,-560.8 857.32,-554.8 863.32,-548.8 869.32,-548.8 869.32,-548.8 1044.55,-548.8 1044.55,-548.8 1050.55,-548.8 1056.55,-554.8 1056.55,-560.8 1056.55,-560.8 1056.55,-620.8 1056.55,-620.8 1056.55,-626.8 1050.55,-632.8 1044.55,-632.8"/>
+<text xml:space="preserve" text-anchor="middle" x="956.94" y="-610.3" font-family="Arial" font-size="13.00">3. Device &amp; Network</text>
+<text xml:space="preserve" text-anchor="middle" x="956.94" y="-594.7" font-family="Arial" font-size="13.00">• Device Fingerprint</text>
+<text xml:space="preserve" text-anchor="middle" x="956.94" y="-579.1" font-family="Arial" font-size="13.00">• Network Type (Wi-Fi/Cell)</text>
+<text xml:space="preserve" text-anchor="middle" x="956.94" y="-563.5" font-family="Arial" font-size="13.00">• Cell Triangulation Delta</text>
 </g>
-<!-- H -->
-<g id="node7" class="node">
-<title>H</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M1155.51,-1249.03C1155.51,-1249.03 1044.49,-1249.03 1044.49,-1249.03 1038.49,-1249.03 1032.49,-1243.03 1032.49,-1237.03 1032.49,-1237.03 1032.49,-1217.83 1032.49,-1217.83 1032.49,-1211.83 1038.49,-1205.83 1044.49,-1205.83 1044.49,-1205.83 1155.51,-1205.83 1155.51,-1205.83 1161.51,-1205.83 1167.51,-1211.83 1167.51,-1217.83 1167.51,-1217.83 1167.51,-1237.03 1167.51,-1237.03 1167.51,-1243.03 1161.51,-1249.03 1155.51,-1249.03"/>
-<text xml:space="preserve" text-anchor="middle" x="1100" y="-1222.03" font-family="Helvetica,sans-Serif" font-size="18.00">High Activity</text>
+<!-- Weather&#45;&gt;P3 -->
+<g id="edge4" class="edge">
+<title>Weather-&gt;P3</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M630.92,-731.02C690.85,-715.25 765.24,-692.93 828.94,-665.6 846.67,-657.99 865.04,-648.48 882.13,-638.84"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="883.53,-642.08 890.46,-634.07 880.05,-636 883.53,-642.08"/>
 </g>
-<!-- J -->
-<g id="node9" class="node">
-<title>J</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M1166.66,-1119.96C1166.66,-1119.96 1064.28,-1084.6 1064.28,-1084.6 1058.61,-1082.64 1058.61,-1078.72 1064.28,-1076.76 1064.28,-1076.76 1166.66,-1041.4 1166.66,-1041.4 1172.33,-1039.44 1183.67,-1039.44 1189.34,-1041.4 1189.34,-1041.4 1291.72,-1076.76 1291.72,-1076.76 1297.39,-1078.72 1297.39,-1082.64 1291.72,-1084.6 1291.72,-1084.6 1189.34,-1119.96 1189.34,-1119.96 1183.67,-1121.92 1172.33,-1121.92 1166.66,-1119.96"/>
-<text xml:space="preserve" text-anchor="middle" x="1178" y="-1075.28" font-family="Helvetica,sans-Serif" font-size="18.00">Syndicate?</text>
+<!-- Vector -->
+<g id="node6" class="node">
+<title>Vector</title>
+<polygon fill="#f1f5f9" stroke="#cbd5e1" points="665.92,-481.8 662.92,-485.8 641.92,-485.8 638.92,-481.8 371.96,-481.8 371.96,-429 665.92,-429 665.92,-481.8"/>
+<text xml:space="preserve" text-anchor="middle" x="518.94" y="-459.3" font-family="Arial" font-size="13.00">Compile Combined Feature Vector</text>
+<text xml:space="preserve" text-anchor="middle" x="518.94" y="-443.7" font-family="Arial" font-size="13.00">(No single signal causes automatic rejection)</text>
 </g>
-<!-- H&#45;&gt;J -->
+<!-- Grace&#45;&gt;Vector -->
 <g id="edge5" class="edge">
-<title>H-&gt;J</title>
-<path fill="none" stroke="#475569" d="M1111.34,-1205.38C1122.27,-1185.1 1139.17,-1153.74 1153.22,-1127.67"/>
-<polygon fill="#475569" stroke="#475569" points="1156.26,-1129.4 1157.92,-1118.94 1150.1,-1126.08 1156.26,-1129.4"/>
+<title>Grace-&gt;Vector</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="5,2" d="M211.85,-563.92C275.6,-541.6 367.66,-509.37 434.34,-486.02"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="435.24,-489.42 443.52,-482.81 432.92,-482.81 435.24,-489.42"/>
 </g>
-<!-- I -->
-<g id="node8" class="node">
-<title>I</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M1358.52,-1249.03C1358.52,-1249.03 1237.48,-1249.03 1237.48,-1249.03 1231.48,-1249.03 1225.48,-1243.03 1225.48,-1237.03 1225.48,-1237.03 1225.48,-1217.83 1225.48,-1217.83 1225.48,-1211.83 1231.48,-1205.83 1237.48,-1205.83 1237.48,-1205.83 1358.52,-1205.83 1358.52,-1205.83 1364.52,-1205.83 1370.52,-1211.83 1370.52,-1217.83 1370.52,-1217.83 1370.52,-1237.03 1370.52,-1237.03 1370.52,-1243.03 1364.52,-1249.03 1358.52,-1249.03"/>
-<text xml:space="preserve" text-anchor="middle" x="1298" y="-1222.03" font-family="Helvetica,sans-Serif" font-size="18.00">Device Match</text>
-</g>
-<!-- I&#45;&gt;J -->
+<!-- P1&#45;&gt;Vector -->
 <g id="edge6" class="edge">
-<title>I-&gt;J</title>
-<path fill="none" stroke="#475569" d="M1280.55,-1205.38C1262.86,-1184.04 1234.99,-1150.42 1212.76,-1123.62"/>
-<polygon fill="#475569" stroke="#475569" points="1215.51,-1121.44 1206.43,-1115.98 1210.12,-1125.91 1215.51,-1121.44"/>
+<title>P1-&gt;Vector</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M463.12,-548.32C474.15,-530.16 486.95,-509.08 497.51,-491.69"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="500.3,-493.85 502.5,-483.48 494.31,-490.21 500.3,-493.85"/>
 </g>
-<!-- J&#45;&gt;F -->
+<!-- P2&#45;&gt;Vector -->
 <g id="edge7" class="edge">
-<title>J-&gt;F</title>
-<path fill="none" stroke="#475569" d="M1116.09,-1058.49C1088.1,-1049.17 1054.51,-1038.35 1024,-1029.48 912.25,-997.01 782.07,-964.56 697.73,-944.23"/>
-<polygon fill="#475569" stroke="#475569" points="698.67,-940.86 688.13,-941.92 697.03,-947.66 698.67,-940.86"/>
-<text xml:space="preserve" text-anchor="middle" x="931.07" y="-988.88" font-family="Helvetica,sans-Serif" font-size="14.00">No</text>
+<title>P2-&gt;Vector</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M643.66,-548.32C617.73,-529.21 587.41,-506.87 563.16,-488.99"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="565.43,-486.32 555.31,-483.2 561.28,-491.96 565.43,-486.32"/>
 </g>
-<!-- REV -->
-<g id="node14" class="node">
-<title>REV</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M936.52,-318.44C936.52,-318.44 859.48,-318.44 859.48,-318.44 853.48,-318.44 847.48,-312.44 847.48,-306.44 847.48,-306.44 847.48,-287.24 847.48,-287.24 847.48,-281.24 853.48,-275.24 859.48,-275.24 859.48,-275.24 936.52,-275.24 936.52,-275.24 942.52,-275.24 948.52,-281.24 948.52,-287.24 948.52,-287.24 948.52,-306.44 948.52,-306.44 948.52,-312.44 942.52,-318.44 936.52,-318.44"/>
-<text xml:space="preserve" text-anchor="middle" x="898" y="-291.44" font-family="Helvetica,sans-Serif" font-size="18.00">Flagged</text>
-</g>
-<!-- J&#45;&gt;REV -->
+<!-- P3&#45;&gt;Vector -->
 <g id="edge8" class="edge">
-<title>J-&gt;REV</title>
-<path fill="none" stroke="#475569" d="M1161.12,-1042.93C1148.35,-1011.77 1133,-965.52 1133,-923.28 1133,-923.28 1133,-923.28 1133,-458.39 1133,-374.43 1029.48,-331.2 959.85,-311.62"/>
-<polygon fill="#475569" stroke="#475569" points="961.02,-308.31 950.45,-309.07 959.19,-315.06 961.02,-308.31"/>
-<text xml:space="preserve" text-anchor="middle" x="1145.06" y="-692.68" font-family="Helvetica,sans-Serif" font-size="14.00">Yes</text>
+<title>P3-&gt;Vector</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M857.01,-550.45C847.57,-547.06 838.1,-543.79 828.94,-540.8 765.55,-520.1 693.77,-500.32 635.25,-485.13"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="636.42,-481.82 625.86,-482.7 634.67,-488.59 636.42,-481.82"/>
 </g>
-<!-- G -->
+<!-- Syndicate -->
+<g id="node7" class="node">
+<title>Syndicate</title>
+<polygon fill="#fee2e2" stroke="#ef4444" points="490.47,-340.8 259.41,-340.8 259.41,-336.8 255.41,-336.8 255.41,-332.8 259.41,-332.8 259.41,-296 255.41,-296 255.41,-292 259.41,-292 259.41,-288 490.47,-288 490.47,-340.8"/>
+<polyline fill="none" stroke="#ef4444" points="259.41,-336.8 263.41,-336.8 263.41,-332.8 259.41,-332.8"/>
+<polyline fill="none" stroke="#ef4444" points="259.41,-296 263.41,-296 263.41,-292 259.41,-292"/>
+<text xml:space="preserve" text-anchor="middle" x="374.94" y="-318.3" font-family="Arial" font-size="13.00">Syndicate Detection</text>
+<text xml:space="preserve" text-anchor="middle" x="374.94" y="-302.7" font-family="Arial" font-size="13.00">(Cluster Analysis for Fraud Rings)</text>
+</g>
+<!-- Vector&#45;&gt;Syndicate -->
+<g id="edge9" class="edge">
+<title>Vector-&gt;Syndicate</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M492.19,-428.58C468.95,-406.15 435.14,-373.51 409.79,-349.04"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="412.48,-346.77 402.85,-342.34 407.61,-351.81 412.48,-346.77"/>
+<text xml:space="preserve" text-anchor="middle" x="494.91" y="-385.2" font-family="Arial" font-size="12.00"> Cluster Check</text>
+</g>
+<!-- IsoForest -->
+<g id="node8" class="node">
+<title>IsoForest</title>
+<polygon fill="#f3e8ff" stroke="#a855f7" points="779.49,-340.8 548.39,-340.8 548.39,-336.8 544.39,-336.8 544.39,-332.8 548.39,-332.8 548.39,-296 544.39,-296 544.39,-292 548.39,-292 548.39,-288 779.49,-288 779.49,-340.8"/>
+<polyline fill="none" stroke="#a855f7" points="548.39,-336.8 552.39,-336.8 552.39,-332.8 548.39,-332.8"/>
+<polyline fill="none" stroke="#a855f7" points="548.39,-296 552.39,-296 552.39,-292 548.39,-292"/>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-318.3" font-family="Arial" font-size="13.00">Isolation Forest Model</text>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-302.7" font-family="Arial" font-size="13.00">(Evaluates Behavioral Anomalies)</text>
+</g>
+<!-- Vector&#45;&gt;IsoForest -->
+<g id="edge10" class="edge">
+<title>Vector-&gt;IsoForest</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M545.87,-428.58C569.27,-406.15 603.32,-373.51 628.85,-349.04"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="631.04,-351.78 635.84,-342.34 626.2,-346.73 631.04,-351.78"/>
+<text xml:space="preserve" text-anchor="middle" x="640.13" y="-385.2" font-family="Arial" font-size="12.00"> Behavioral Check</text>
+</g>
+<!-- Decision -->
+<g id="node9" class="node">
+<title>Decision</title>
+<path fill="#f8fafc" stroke="#cbd5e1" d="M652.44,-204.17C652.44,-204.17 550.58,-173.83 550.58,-173.83 544.83,-172.11 544.83,-168.69 550.58,-166.97 550.58,-166.97 652.44,-136.63 652.44,-136.63 658.19,-134.91 669.69,-134.91 675.44,-136.63 675.44,-136.63 777.29,-166.97 777.29,-166.97 783.04,-168.69 783.04,-172.11 777.29,-173.83 777.29,-173.83 675.44,-204.17 675.44,-204.17 669.69,-205.89 658.19,-205.89 652.44,-204.17"/>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-166.5" font-family="Arial" font-size="13.00">Decision Matrix</text>
+</g>
+<!-- Syndicate&#45;&gt;Decision -->
+<g id="edge11" class="edge">
+<title>Syndicate-&gt;Decision</title>
+<path fill="none" stroke="#22c55e" stroke-width="1.2" d="M427.61,-287.52C478.48,-262.52 555.28,-224.79 607.42,-199.17"/>
+<polygon fill="#22c55e" stroke="#22c55e" stroke-width="1.2" points="608.76,-202.41 616.2,-194.86 605.68,-196.13 608.76,-202.41"/>
+<text xml:space="preserve" text-anchor="middle" x="535.44" y="-244.2" font-family="Arial" font-size="12.00"> Clear</text>
+</g>
+<!-- Review -->
 <g id="node11" class="node">
-<title>G</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M623.62,-823.87C623.62,-823.87 517.34,-788.29 517.34,-788.29 511.65,-786.39 511.65,-782.58 517.34,-780.67 517.34,-780.67 623.62,-745.09 623.62,-745.09 629.31,-743.19 640.69,-743.19 646.38,-745.09 646.38,-745.09 752.66,-780.67 752.66,-780.67 758.35,-782.58 758.35,-786.39 752.66,-788.29 752.66,-788.29 646.38,-823.87 646.38,-823.87 640.69,-825.78 629.31,-825.78 623.62,-823.87"/>
-<text xml:space="preserve" text-anchor="middle" x="635" y="-779.08" font-family="Helvetica,sans-Serif" font-size="18.00">Risk Level?</text>
+<title>Review</title>
+<path fill="#fecaca" stroke="#dc2626" stroke-width="2" d="M455.17,-52.8C455.17,-52.8 204.71,-52.8 204.71,-52.8 198.71,-52.8 192.71,-46.8 192.71,-40.8 192.71,-40.8 192.71,-12 192.71,-12 192.71,-6 198.71,0 204.71,0 204.71,0 455.17,0 455.17,0 461.17,0 467.17,-6 467.17,-12 467.17,-12 467.17,-40.8 467.17,-40.8 467.17,-46.8 461.17,-52.8 455.17,-52.8"/>
+<text xml:space="preserve" text-anchor="middle" x="329.94" y="-30.3" font-family="Arial" font-size="13.00" fill="#7f1d1d">Flag for Manual Review</text>
+<text xml:space="preserve" text-anchor="middle" x="329.94" y="-14.7" font-family="Arial" font-size="13.00" fill="#7f1d1d">(Anomalous pattern or coordinated spike)</text>
 </g>
-<!-- F&#45;&gt;G -->
+<!-- Syndicate&#45;&gt;Review -->
+<g id="edge12" class="edge">
+<title>Syndicate-&gt;Review</title>
+<path fill="none" stroke="#ef4444" stroke-width="1.2" d="M370.28,-287.78C366.44,-266.37 360.92,-235.03 356.51,-207.6 348.57,-158.23 340.3,-101.1 335.14,-64.63"/>
+<polygon fill="#ef4444" stroke="#ef4444" stroke-width="1.2" points="338.63,-64.31 333.77,-54.89 331.7,-65.28 338.63,-64.31"/>
+<text xml:space="preserve" text-anchor="middle" x="433.23" y="-166.8" font-family="Arial" font-size="12.00" fill="#ef4444"> Coordinated Spike Detected</text>
+</g>
+<!-- IsoForest&#45;&gt;Decision -->
+<g id="edge13" class="edge">
+<title>IsoForest-&gt;Decision</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M663.94,-287.68C663.94,-268.7 663.94,-242.29 663.94,-219.44"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="667.44,-219.69 663.94,-209.69 660.44,-219.69 667.44,-219.69"/>
+<text xml:space="preserve" text-anchor="middle" x="706.29" y="-244.2" font-family="Arial" font-size="12.00"> Anomaly Score</text>
+</g>
+<!-- Payout -->
+<g id="node10" class="node">
+<title>Payout</title>
+<path fill="#bbf7d0" stroke="#16a34a" stroke-width="2" d="M789.51,-52.8C789.51,-52.8 538.36,-52.8 538.36,-52.8 532.36,-52.8 526.36,-46.8 526.36,-40.8 526.36,-40.8 526.36,-12 526.36,-12 526.36,-6 532.36,0 538.36,0 538.36,0 789.51,0 789.51,0 795.51,0 801.51,-6 801.51,-12 801.51,-12 801.51,-40.8 801.51,-40.8 801.51,-46.8 795.51,-52.8 789.51,-52.8"/>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-30.3" font-family="Arial" font-size="13.00" fill="#065f46">Instant UPI Payout</text>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-14.7" font-family="Arial" font-size="13.00" fill="#065f46">(Overall pattern indicates legitimate work)</text>
+</g>
+<!-- Decision&#45;&gt;Payout -->
 <g id="edge14" class="edge">
-<title>F-&gt;G</title>
-<path fill="none" stroke="#475569" d="M613.01,-900.36C616.24,-883.44 620.94,-858.9 625.17,-836.83"/>
-<polygon fill="#475569" stroke="#475569" points="628.6,-837.54 627.04,-827.06 621.72,-836.23 628.6,-837.54"/>
+<title>Decision-&gt;Payout</title>
+<path fill="none" stroke="#22c55e" stroke-width="1.2" d="M663.94,-132.83C663.94,-111.95 663.94,-85.82 663.94,-64.8"/>
+<polygon fill="#22c55e" stroke="#22c55e" stroke-width="1.2" points="667.44,-64.91 663.94,-54.91 660.44,-64.91 667.44,-64.91"/>
+<text xml:space="preserve" text-anchor="middle" x="693.29" y="-89.4" font-family="Arial" font-size="12.00" fill="#16a34a"> Legitimate</text>
 </g>
-<!-- HOLD -->
-<g id="node12" class="node">
-<title>HOLD</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M558.02,-643.54C558.02,-643.54 423.98,-643.54 423.98,-643.54 417.98,-643.54 411.98,-637.54 411.98,-631.54 411.98,-631.54 411.98,-612.34 411.98,-612.34 411.98,-606.34 417.98,-600.34 423.98,-600.34 423.98,-600.34 558.02,-600.34 558.02,-600.34 564.02,-600.34 570.02,-606.34 570.02,-612.34 570.02,-612.34 570.02,-631.54 570.02,-631.54 570.02,-637.54 564.02,-643.54 558.02,-643.54"/>
-<text xml:space="preserve" text-anchor="middle" x="491" y="-616.54" font-family="Helvetica,sans-Serif" font-size="18.00">Notify (2h SLA)</text>
-</g>
-<!-- G&#45;&gt;HOLD -->
-<g id="edge16" class="edge">
-<title>G-&gt;HOLD</title>
-<path fill="none" stroke="#475569" d="M605.86,-750.99C579.9,-722.06 542.27,-680.09 517.23,-652.18"/>
-<polygon fill="#475569" stroke="#475569" points="519.87,-649.89 510.59,-644.78 514.66,-654.56 519.87,-649.89"/>
-<text xml:space="preserve" text-anchor="middle" x="587.9" y="-692.68" font-family="Helvetica,sans-Serif" font-size="14.00">Medium</text>
-</g>
-<!-- G&#45;&gt;REV -->
-<g id="edge17" class="edge">
-<title>G-&gt;REV</title>
-<path fill="none" stroke="#475569" d="M705.59,-764.45C750.93,-748.46 807.12,-720.91 839,-676.34 915.99,-568.7 908.94,-399.71 901.98,-329.78"/>
-<polygon fill="#475569" stroke="#475569" points="905.5,-329.74 900.95,-320.17 898.54,-330.49 905.5,-329.74"/>
-<text xml:space="preserve" text-anchor="middle" x="908.3" y="-542.79" font-family="Helvetica,sans-Serif" font-size="14.00">High</text>
-</g>
-<!-- PAY1 -->
-<g id="node17" class="node">
-<title>PAY1</title>
-<ellipse fill="#22c55e" stroke="#cbd5e1" cx="720" cy="-621.94" rx="89.84" ry="30.55"/>
-<text xml:space="preserve" text-anchor="middle" x="720" y="-616.54" font-family="Helvetica,sans-Serif" font-size="18.00" fill="white">UPI Payout</text>
-</g>
-<!-- G&#45;&gt;PAY1 -->
+<!-- Decision&#45;&gt;Review -->
 <g id="edge15" class="edge">
-<title>G-&gt;PAY1</title>
-<path fill="none" stroke="#475569" d="M654.08,-747.45C667.47,-722.15 685.38,-688.32 699.15,-662.31"/>
-<polygon fill="#475569" stroke="#475569" points="702.1,-664.22 703.69,-653.74 695.92,-660.94 702.1,-664.22"/>
-<text xml:space="preserve" text-anchor="middle" x="697.95" y="-692.68" font-family="Helvetica,sans-Serif" font-size="14.00">Low</text>
-</g>
-<!-- WATCH -->
-<g id="node13" class="node">
-<title>WATCH</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M471.6,-498.83C471.6,-498.83 363.34,-463.14 363.34,-463.14 357.64,-461.27 357.64,-457.51 363.34,-455.63 363.34,-455.63 471.6,-419.94 471.6,-419.94 477.3,-418.07 488.7,-418.07 494.4,-419.94 494.4,-419.94 602.66,-455.63 602.66,-455.63 608.36,-457.51 608.36,-461.27 602.66,-463.14 602.66,-463.14 494.4,-498.83 494.4,-498.83 488.7,-500.71 477.3,-500.71 471.6,-498.83"/>
-<text xml:space="preserve" text-anchor="middle" x="483" y="-453.99" font-family="Helvetica,sans-Serif" font-size="18.00">Consistent?</text>
-</g>
-<!-- HOLD&#45;&gt;WATCH -->
-<g id="edge18" class="edge">
-<title>HOLD-&gt;WATCH</title>
-<path fill="none" stroke="#475569" d="M489.95,-599.95C488.87,-578.11 487.12,-543.05 485.65,-513.54"/>
-<polygon fill="#475569" stroke="#475569" points="489.15,-513.45 485.15,-503.63 482.16,-513.79 489.15,-513.45"/>
-</g>
-<!-- WATCH&#45;&gt;REV -->
-<g id="edge20" class="edge">
-<title>WATCH-&gt;REV</title>
-<path fill="none" stroke="#475569" d="M542.46,-435.39C620.75,-405.1 757.71,-352.11 836.84,-321.5"/>
-<polygon fill="#475569" stroke="#475569" points="837.66,-324.94 845.72,-318.06 835.13,-318.41 837.66,-324.94"/>
-<text xml:space="preserve" text-anchor="middle" x="736.62" y="-367.59" font-family="Helvetica,sans-Serif" font-size="14.00">No</text>
-</g>
-<!-- PAY2 -->
-<g id="node18" class="node">
-<title>PAY2</title>
-<ellipse fill="#22c55e" stroke="#cbd5e1" cx="483" cy="-296.84" rx="94.8" ry="30.55"/>
-<text xml:space="preserve" text-anchor="middle" x="483" y="-291.44" font-family="Helvetica,sans-Serif" font-size="18.00" fill="white">Auto Payout</text>
-</g>
-<!-- WATCH&#45;&gt;PAY2 -->
-<g id="edge19" class="edge">
-<title>WATCH-&gt;PAY2</title>
-<path fill="none" stroke="#475569" d="M483,-415.79C483,-391.94 483,-362.37 483,-338.8"/>
-<polygon fill="#475569" stroke="#475569" points="486.5,-338.94 483,-328.94 479.5,-338.94 486.5,-338.94"/>
-<text xml:space="preserve" text-anchor="middle" x="495.06" y="-367.59" font-family="Helvetica,sans-Serif" font-size="14.00">Yes</text>
-</g>
-<!-- EVID -->
-<g id="node15" class="node">
-<title>EVID</title>
-<path fill="#ffffff" stroke="#cbd5e1" d="M964.53,-193.29C964.53,-193.29 831.47,-193.29 831.47,-193.29 825.47,-193.29 819.47,-187.29 819.47,-181.29 819.47,-181.29 819.47,-162.09 819.47,-162.09 819.47,-156.09 825.47,-150.09 831.47,-150.09 831.47,-150.09 964.53,-150.09 964.53,-150.09 970.53,-150.09 976.53,-156.09 976.53,-162.09 976.53,-162.09 976.53,-181.29 976.53,-181.29 976.53,-187.29 970.53,-193.29 964.53,-193.29"/>
-<text xml:space="preserve" text-anchor="middle" x="898" y="-166.29" font-family="Helvetica,sans-Serif" font-size="18.00">Evidence (24h)</text>
-</g>
-<!-- REV&#45;&gt;EVID -->
-<g id="edge21" class="edge">
-<title>REV-&gt;EVID</title>
-<path fill="none" stroke="#475569" d="M898,-274.95C898,-255.84 898,-227.28 898,-205.19"/>
-<polygon fill="#475569" stroke="#475569" points="901.5,-205.2 898,-195.2 894.5,-205.2 901.5,-205.2"/>
-</g>
-<!-- ANALYST -->
-<g id="node16" class="node">
-<title>ANALYST</title>
-<ellipse fill="#0ea5e9" stroke="#cbd5e1" cx="898" cy="-46.55" rx="74.27" ry="30.55"/>
-<text xml:space="preserve" text-anchor="middle" x="898" y="-41.15" font-family="Helvetica,sans-Serif" font-size="18.00" fill="white">Decision</text>
-</g>
-<!-- EVID&#45;&gt;ANALYST -->
-<g id="edge22" class="edge">
-<title>EVID-&gt;ANALYST</title>
-<path fill="none" stroke="#475569" d="M898,-149.8C898,-133.09 898,-109.14 898,-88.62"/>
-<polygon fill="#475569" stroke="#475569" points="901.5,-88.84 898,-78.84 894.5,-88.84 901.5,-88.84"/>
+<title>Decision-&gt;Review</title>
+<path fill="none" stroke="#ef4444" stroke-width="1.2" d="M613.21,-147.83C556.8,-123.85 465.25,-84.93 401.55,-57.85"/>
+<polygon fill="#ef4444" stroke="#ef4444" stroke-width="1.2" points="403.03,-54.67 392.46,-53.98 400.29,-61.12 403.03,-54.67"/>
+<text xml:space="preserve" text-anchor="middle" x="546.96" y="-89.4" font-family="Arial" font-size="12.00" fill="#dc2626"> Highly Anomalous</text>
 </g>
 </g>
 </svg>
