@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo.jpg" alt="CashUrance Logo" width="200"/>
+  <img src="logo.png" alt="CashUrance Logo" width="200"/>
   
   <h1>CashUrance: AI-Powered Income Protection for Delivery Partners</h1>
   <p><b>Developed by Team D.E.V (Deploy - Execute - Vanish)</b></p>
