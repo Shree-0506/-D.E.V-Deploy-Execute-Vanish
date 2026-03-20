@@ -41,9 +41,9 @@ Delivery partners operate entirely via their mobile devices. A web-based platfor
 
 ---
 
-## AI & ML System: Models, Fraud Defense & Anti-Spoofing Strategy
+## AI & ML System: Models and Microservices
 
-The system architecture decouples complex machine learning tasks into specialized microservices, ensuring high scalability, low latency, and strict interpretability for auditing purposes. The fraud defense layer is a direct extension of this architecture — treating GPS as **one signal among many**, not as the ultimate ground truth.
+The system architecture decouples complex machine learning tasks into specialized microservices, ensuring high scalability, low latency, and strict interpretability for auditing purposes. 
 
 ### ML Module Overview
 
@@ -55,11 +55,13 @@ The system architecture decouples complex machine learning tasks into specialize
 | **Fraud Detection** | Isolation Forest | Identifies anomalous operational behavior (GPS spoofing, impossible travel velocities) operating in parallel with a strict heuristic rule layer to prevent duplicate claims. |
 | **Risk Profiling** | K-Means Clustering | Segments the delivery fleet into structured risk tiers during onboarding to optimize initial pricing and insurer capital allocation. |
 
-### Adversarial Defense: Differentiating Genuine Workers from Spoofers
+---
 
-GPS spoofing by organized syndicates is a known attack vector on parametric platforms. Because weather triggers are objective and automatic, a fraud ring can easily fake their location in an affected zone to drain the liquidity pool. 
+## Adversarial Defense & Anti-Spoofing Strategy
 
-The system distinguishes a genuinely stranded delivery partner from a bad actor by comparing **behavioral consistency** across multiple signals, rather than relying on location alone.
+The fraud defense layer is a direct extension of our AI architecture—treating GPS as **one signal among many**, not as the ultimate ground truth. GPS spoofing by organized syndicates is a known attack vector on parametric platforms. Because weather triggers are objective and automatic, a fraud ring can easily fake their location in an affected zone to drain the liquidity pool. 
+
+The system distinguishes a genuinely stranded delivery partner from a bad actor by comparing **behavioral consistency** across multiple signals.
 
 **A legitimately affected worker typically shows:**
 * Recent delivery movement in the zone prior to the trigger.
@@ -104,95 +106,66 @@ This prevents a coordinated ring from gaming the system by keeping individual cl
 
 A flagged worker is **never automatically denied**. The tiered hold workflow protects honest workers who might be experiencing genuine network or GPS issues during severe weather:
 
-| Risk Tier | System Action |
-| :--- | :--- |
-| **Low Risk** | Claim proceeds normally; payout executes immediately. |
-| **Medium Risk** | Payout deferred; 30-minute telemetry watch window opens; auto-resolves if signals stabilize. |
-| **High Risk** | Enters secondary review with a reason code; partner is notified with a 24-hour window to submit platform activity evidence. |
-
 > **GPS Drop Grace Window:** A partner who loses GPS signal mid-shift due to severe weather is not penalized. Their last valid zone location is cached with a **15-minute grace window**. If the trigger event falls within that window, the claim is treated as zone-confirmed.
 > 
 > **Core Principle:** False negatives (paying a fraudster) are financially recoverable. False positives (wrongly denying a genuine worker in a crisis) destroy trust and cause permanent churn. The objective is **reliable trust scoring before payout release**, not aggressive denial.
 
-### Anti-Spoofing Decision Flow
+### Anti-Spoofing Decision Pipeline
 
-```mermaid
-graph LR
-    %% Theme and Class Definitions
-    classDef triggerNode fill:#2d333b,stroke:#8b949e,stroke-width:1px,color:#c9d1d9,rx:15px,ry:15px;
-    classDef darkBox fill:#22272e,stroke:#444c56,stroke-width:1px,color:#adbac7;
-    classDef decisionBox fill:#22272e,shape:diamond,stroke:#444c56,stroke-width:1px,color:#adbac7;
-    classDef successNode fill:#238636,stroke:#none,color:#ffffff,rx:15px,ry:15px;
-    classDef graceNode fill:#22272e,stroke:#8b949e,stroke-dasharray: 5 5,color:#adbac7,rx:15px,ry:15px;
-    classDef humanNode fill:#1f6feb,stroke:#none,color:#ffffff,rx:15px,ry:15px;
+*(Insert your high-resolution Figma flowchart image below by replacing the file path)*
 
-    %% Independent Triggers
-    WEATHER([Weather trigger<br/>Threshold crossed]):::triggerNode
-    GRACE([GPS drop grace<br/>Last zone cached · 15 min]):::graceNode
+![Anti-Spoofing Decision Flow](path/to/your/figma-export.png)
 
-    %% Subgraph: Signal Harvest
-    subgraph HARVEST [Signal Harvest]
-        B[GPS + trajectory<br/>continuity]:::darkBox
-        C[Accelerometer<br/>& cell tower]:::darkBox
-        D[App foreground<br/>& battery state]:::darkBox
-        E[Platform order<br/>acceptance history]:::darkBox
-    end
+**Pipeline Breakdown:**
+1. **Trigger & Harvest:** A weather threshold is crossed. The system instantly harvests the multi-signal feature vector (GPS, accelerometer, battery state, order history). *Note: The 15-minute GPS grace cache feeds into this step.*
+2. **Syndicate Cluster Check:** The system checks for macro-level anomalies (e.g., 200+ claims in 5 minutes from one zone, or duplicated device fingerprints). 
+   * *If flagged:* Routed immediately to Manual Review.
+   * *If clean:* Proceeds to the Isolation Forest.
+3. **AI Anomaly Scoring:** The Isolation Forest evaluates the combined feature vector and assigns a risk score.
+4. **Resolution Routing:**
+   * **Low Risk:** Automatically approved. **Instant UPI Payout** executed.
+   * **Medium Risk (Soft Hold):** Payout deferred. Partner receives a 2-hour SLA notification while a 30-minute telemetry watch window opens. If signals stabilize and verify, it results in an **Auto-resolve payout**. If not, it moves to Manual Review.
+   * **High Risk:** Automatically routed to Manual Review. A reason code is assigned, and the partner has a 24-hour window to submit evidence (e.g., platform screenshots). A human analyst makes the final decision.
 
-    %% Subgraph: Cluster Check
-    subgraph CLUSTER [Cluster Check]
-        H[Zone velocity<br/>200+ claims / 5 min]:::darkBox
-        I[Device fingerprint<br/>duplication]:::darkBox
-        J{Syndicate<br/>flag?}:::decisionBox
-    end
+---
 
-    %% Subgraph: Isolation Forest
-    subgraph MODEL [Isolation Forest]
-        F[Combined<br/>feature vector]:::darkBox
-        G{Anomaly<br/>score?}:::decisionBox
-    end
+## Technical Stack
 
-    %% Subgraph: Soft Hold
-    subgraph HOLD_BLOCK [Soft Hold]
-        HOLD[Notify partner<br/>2-hr SLA]:::darkBox
-        WATCH{30-min telemetry<br/>consistent?}:::decisionBox
-    end
+* **UI/UX Interface:** Figma
+* **Client Application:** React Native (Cross-platform mobile application)
+* **Backend API Gateway:** Node.js / Express
+* **AI/ML Microservices:** Python (FastAPI, Scikit-learn, CatBoost)
+* **Event Routing:** Redis Pub/Sub (Asynchronous processing for weather triggers)
+* **Database Infrastructure:** PostgreSQL (Relational user & policy data) + MongoDB (Raw API telemetry & location data)
+* **External Integrations:** OpenWeather API (Mocked), Razorpay/Stripe Test Environment (Payouts)
 
-    %% Subgraph: Manual Review
-    subgraph REVIEW_BLOCK [Manual Review]
-        REV[Reason code assigned]:::darkBox
-        EVID[Partner submits<br/>24-hr evidence window]:::darkBox
-        ANALYST([Human analyst decision]):::humanNode
-    end
+---
 
-    %% Payout Nodes
-    PAY1([✓ Instant UPI payout]):::successNode
-    PAY2([✓ Auto-resolve payout]):::successNode
+## Development Roadmap (6-Week Timeline)
 
-    %% Logic Connections
-    WEATHER --> B & C & D & E
-    H & I --> J
-    
-    J -- No --> F
-    J -- Yes --> REV
+* **Phase 1 (Weeks 1-2): Ideation & Foundation**
+  * Finalize persona constraints and exact parametric triggers.
+  * Design high-fidelity UI/UX wireframes.
+  * Document system architecture and ML pipelines.
+* **Phase 2 (Weeks 3-4): Automation & Protection**
+  * Develop the mobile client (Registration & Weekly Policy Management).
+  * Train and deploy the CatBoost predictive premium service.
+  * Integrate mock APIs and deploy the Rule-Based Parametric Trigger.
+* **Phase 3 (Weeks 5-6): Scale & Optimize**
+  * Implement the Isolation Forest Fraud Detection microservice.
+  * Integrate mock UPI payment gateways for end-to-end payout simulation.
+  * Develop the Insurer Analytics Dashboard for administrative oversight.
 
-    B & C & D & E --> F
-    GRACE -. feeds .-> F
+---
 
-    F --> G
+## Phase 1 Deliverables
 
-    G -- Low --> PAY1
-    G -- Medium --> HOLD
-    G -- High --> REV
+* **GitHub Repository:** [Link to this Repo](#)
+* **Strategy & Prototype Pitch Video (2-mins):** [Insert YouTube/Drive Link Here](#)
 
-    HOLD --> WATCH
-    WATCH -- Yes --> PAY2
-    WATCH -- No --> REV
+---
 
-    REV --> EVID --> ANALYST
-
-    %% Subgraph Styling for Pastel Backgrounds
-    style HARVEST fill:#e6f4ea,stroke:#1e8e3e,stroke-width:2px,color:#0b5323
-    style CLUSTER fill:#fef7e0,stroke:#f9ab00,stroke-width:2px,color:#5c3e00
-    style MODEL fill:#f3f0ff,stroke:#7f77dd,stroke-width:2px,color:#26215c
-    style HOLD_BLOCK fill:#fef7e0,stroke:#f9ab00,stroke-width:2px,color:#5c3e00
-    style REVIEW_BLOCK fill:#fce8e6,stroke:#d93025,stroke-width:2px,color:#7a1a10
+<div align="center">
+  <i>Deploy - Execute - Vanish</i><br>
+  <b>Team D.E.V</b>
+</div>
