@@ -1,0 +1,293 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2325pt" height="665pt" viewBox="0.00 0.00 2325.00 665.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 629)">
+<title>AntiSpoofingFlow</title>
+<polygon fill="white" stroke="none" points="-36,36 -36,-629 2289.25,-629 2289.25,36 -36,36"/>
+<g id="clust1" class="cluster">
+<title>cluster_Harvest</title>
+<path fill="#f0fdf4" stroke="#22c55e" d="M294.24,-8C294.24,-8 418.82,-8 418.82,-8 424.82,-8 430.82,-14 430.82,-20 430.82,-20 430.82,-316 430.82,-316 430.82,-322 424.82,-328 418.82,-328 418.82,-328 294.24,-328 294.24,-328 288.24,-328 282.24,-322 282.24,-316 282.24,-316 282.24,-20 282.24,-20 282.24,-14 288.24,-8 294.24,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-311.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#166534">Signal Harvest</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_Cluster</title>
+<path fill="#fefce8" stroke="#eab308" d="M26.21,-419C26.21,-419 436.54,-419 436.54,-419 442.54,-419 448.54,-425 448.54,-431 448.54,-431 448.54,-573 448.54,-573 448.54,-579 442.54,-585 436.54,-585 436.54,-585 26.21,-585 26.21,-585 20.21,-585 14.21,-579 14.21,-573 14.21,-573 14.21,-431 14.21,-431 14.21,-425 20.21,-419 26.21,-419"/>
+<text xml:space="preserve" text-anchor="middle" x="231.38" y="-568.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#854d0e">Cluster Check</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_Model</title>
+<path fill="#faf5ff" stroke="#a855f7" d="M553.93,-217C553.93,-217 858.87,-217 858.87,-217 864.87,-217 870.87,-223 870.87,-229 870.87,-229 870.87,-342 870.87,-342 870.87,-348 864.87,-354 858.87,-354 858.87,-354 553.93,-354 553.93,-354 547.93,-354 541.93,-348 541.93,-342 541.93,-342 541.93,-229 541.93,-229 541.93,-223 547.93,-217 553.93,-217"/>
+<text xml:space="preserve" text-anchor="middle" x="706.4" y="-337.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#581c87">Isolation Forest</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_Hold</title>
+<path fill="#fefce8" stroke="#eab308" d="M998.96,-224C998.96,-224 1467.46,-224 1467.46,-224 1473.46,-224 1479.46,-230 1479.46,-236 1479.46,-236 1479.46,-349 1479.46,-349 1479.46,-355 1473.46,-361 1467.46,-361 1467.46,-361 998.96,-361 998.96,-361 992.96,-361 986.96,-355 986.96,-349 986.96,-349 986.96,-236 986.96,-236 986.96,-230 992.96,-224 998.96,-224"/>
+<text xml:space="preserve" text-anchor="middle" x="1233.21" y="-344.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#854d0e">Soft Hold</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_Review</title>
+<path fill="#fef2f2" stroke="#ef4444" d="M1572.11,-366C1572.11,-366 2233.25,-366 2233.25,-366 2239.25,-366 2245.25,-372 2245.25,-378 2245.25,-378 2245.25,-443 2245.25,-443 2245.25,-449 2239.25,-455 2233.25,-455 2233.25,-455 1572.11,-455 1572.11,-455 1566.11,-455 1560.11,-449 1560.11,-443 1560.11,-443 1560.11,-378 1560.11,-378 1560.11,-372 1566.11,-366 1572.11,-366"/>
+<text xml:space="preserve" text-anchor="middle" x="1902.68" y="-438.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#991b1b">Manual Review</text>
+</g>
+<!-- Weather -->
+<g id="node1" class="node">
+<title>Weather</title>
+<ellipse fill="#f3f4f6" stroke="#d0d7de" cx="92.67" cy="-144" rx="92.67" ry="33.94"/>
+<text xml:space="preserve" text-anchor="middle" x="92.67" y="-148.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Weather trigger</text>
+<text xml:space="preserve" text-anchor="middle" x="92.67" y="-131.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Threshold crossed</text>
+</g>
+<!-- Node_B -->
+<g id="node3" class="node">
+<title>Node_B</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M406.04,-218C406.04,-218 307.02,-218 307.02,-218 301.02,-218 295.02,-212 295.02,-206 295.02,-206 295.02,-182 295.02,-182 295.02,-176 301.02,-170 307.02,-170 307.02,-170 406.04,-170 406.04,-170 412.04,-170 418.04,-176 418.04,-182 418.04,-182 418.04,-206 418.04,-206 418.04,-212 412.04,-218 406.04,-218"/>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-198.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">GPS + trajectory</text>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-181.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">continuity</text>
+</g>
+<!-- Weather&#45;&gt;Node_B -->
+<g id="edge1" class="edge">
+<title>Weather-&gt;Node_B</title>
+<path fill="none" stroke="#57606a" d="M175.45,-159.61C210.1,-166.23 250.12,-173.87 283.62,-180.27"/>
+<polygon fill="#57606a" stroke="#57606a" points="282.75,-183.67 293.23,-182.1 284.06,-176.79 282.75,-183.67"/>
+</g>
+<!-- Node_C -->
+<g id="node4" class="node">
+<title>Node_C</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M400.12,-141C400.12,-141 312.94,-141 312.94,-141 306.94,-141 300.94,-135 300.94,-129 300.94,-129 300.94,-105 300.94,-105 300.94,-99 306.94,-93 312.94,-93 312.94,-93 400.12,-93 400.12,-93 406.12,-93 412.12,-99 412.12,-105 412.12,-105 412.12,-129 412.12,-129 412.12,-135 406.12,-141 400.12,-141"/>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-121.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Accelerometer</text>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-104.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">&amp; cell tower</text>
+</g>
+<!-- Weather&#45;&gt;Node_C -->
+<g id="edge2" class="edge">
+<title>Weather-&gt;Node_C</title>
+<path fill="none" stroke="#57606a" d="M182.32,-134.86C217.36,-131.25 256.93,-127.17 289.39,-123.82"/>
+<polygon fill="#57606a" stroke="#57606a" points="289.46,-127.33 299.05,-122.82 288.74,-120.37 289.46,-127.33"/>
+</g>
+<!-- Node_D -->
+<g id="node5" class="node">
+<title>Node_D</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M403.84,-64C403.84,-64 309.22,-64 309.22,-64 303.22,-64 297.22,-58 297.22,-52 297.22,-52 297.22,-28 297.22,-28 297.22,-22 303.22,-16 309.22,-16 309.22,-16 403.84,-16 403.84,-16 409.84,-16 415.84,-22 415.84,-28 415.84,-28 415.84,-52 415.84,-52 415.84,-58 409.84,-64 403.84,-64"/>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-44.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">App foreground</text>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-27.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">&amp; battery state</text>
+</g>
+<!-- Weather&#45;&gt;Node_D -->
+<g id="edge3" class="edge">
+<title>Weather-&gt;Node_D</title>
+<path fill="none" stroke="#57606a" d="M147.42,-116.26C172.29,-104 202.44,-89.91 230.34,-79 248.15,-72.03 267.76,-65.43 286.07,-59.72"/>
+<polygon fill="#57606a" stroke="#57606a" points="286.99,-63.09 295.52,-56.81 284.94,-56.4 286.99,-63.09"/>
+</g>
+<!-- Node_E -->
+<g id="node6" class="node">
+<title>Node_E</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M410.82,-295C410.82,-295 302.24,-295 302.24,-295 296.24,-295 290.24,-289 290.24,-283 290.24,-283 290.24,-259 290.24,-259 290.24,-253 296.24,-247 302.24,-247 302.24,-247 410.82,-247 410.82,-247 416.82,-247 422.82,-253 422.82,-259 422.82,-259 422.82,-283 422.82,-283 422.82,-289 416.82,-295 410.82,-295"/>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-275.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Platform order</text>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-258.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">acceptance history</text>
+</g>
+<!-- Weather&#45;&gt;Node_E -->
+<g id="edge4" class="edge">
+<title>Weather-&gt;Node_E</title>
+<path fill="none" stroke="#57606a" d="M134.06,-174.67C160.38,-193.52 196.07,-217.04 230.34,-233 245.71,-240.16 262.76,-246.38 279.2,-251.59"/>
+<polygon fill="#57606a" stroke="#57606a" points="277.86,-254.84 288.45,-254.43 279.92,-248.15 277.86,-254.84"/>
+</g>
+<!-- GPSGrace -->
+<g id="node2" class="node">
+<title>GPSGrace</title>
+<ellipse fill="#f3f4f6" stroke="#d0d7de" stroke-dasharray="5,2" cx="356.53" cy="-370" rx="126.19" ry="33.94"/>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-374.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">GPS drop grace</text>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-357.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Last zone cached · 15 min</text>
+</g>
+<!-- Node_F -->
+<g id="node10" class="node">
+<title>Node_F</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M644.07,-295C644.07,-295 561.93,-295 561.93,-295 555.93,-295 549.93,-289 549.93,-283 549.93,-283 549.93,-259 549.93,-259 549.93,-253 555.93,-247 561.93,-247 561.93,-247 644.07,-247 644.07,-247 650.07,-247 656.07,-253 656.07,-259 656.07,-259 656.07,-283 656.07,-283 656.07,-289 650.07,-295 644.07,-295"/>
+<text xml:space="preserve" text-anchor="middle" x="603" y="-275.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Combined</text>
+<text xml:space="preserve" text-anchor="middle" x="603" y="-258.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">feature vector</text>
+</g>
+<!-- GPSGrace&#45;&gt;Node_F -->
+<g id="edge13" class="edge">
+<title>GPSGrace-&gt;Node_F</title>
+<path fill="none" stroke="#57606a" stroke-dasharray="5,2" d="M445.44,-345.49C458.08,-341.34 470.82,-336.8 482.72,-332 504.96,-323.02 528.62,-311.39 548.97,-300.69"/>
+<polygon fill="#57606a" stroke="#57606a" points="550.45,-303.86 557.63,-296.07 547.16,-297.68 550.45,-303.86"/>
+<text xml:space="preserve" text-anchor="middle" x="516.33" y="-325.12" font-family="Helvetica,Arial,sans-serif" font-size="11.00">feeds</text>
+</g>
+<!-- Node_B&#45;&gt;Node_F -->
+<g id="edge9" class="edge">
+<title>Node_B-&gt;Node_F</title>
+<path fill="none" stroke="#57606a" d="M418.37,-212.87C438.83,-219.23 461.77,-226.4 482.72,-233 500.92,-238.73 520.66,-245 538.75,-250.77"/>
+<polygon fill="#57606a" stroke="#57606a" points="537.44,-254.02 548.03,-253.73 539.57,-247.35 537.44,-254.02"/>
+</g>
+<!-- Node_C&#45;&gt;Node_F -->
+<g id="edge10" class="edge">
+<title>Node_C-&gt;Node_F</title>
+<path fill="none" stroke="#57606a" d="M412.53,-128.22C435.27,-134.33 461.27,-143.3 482.72,-156 519.26,-177.63 553.31,-212.55 575.6,-238.24"/>
+<polygon fill="#57606a" stroke="#57606a" points="572.85,-240.41 582,-245.75 578.18,-235.87 572.85,-240.41"/>
+</g>
+<!-- Node_D&#45;&gt;Node_F -->
+<g id="edge11" class="edge">
+<title>Node_D-&gt;Node_F</title>
+<path fill="none" stroke="#57606a" d="M416.13,-49.19C438.66,-54.92 463.55,-64.16 482.72,-79 536.26,-120.42 571.8,-193.18 589.29,-236.25"/>
+<polygon fill="#57606a" stroke="#57606a" points="585.97,-237.36 592.9,-245.38 592.48,-234.79 585.97,-237.36"/>
+</g>
+<!-- Node_E&#45;&gt;Node_F -->
+<g id="edge12" class="edge">
+<title>Node_E-&gt;Node_F</title>
+<path fill="none" stroke="#57606a" d="M423.04,-271C458.78,-271 502.82,-271 538.27,-271"/>
+<polygon fill="#57606a" stroke="#57606a" points="537.95,-274.5 547.95,-271 537.95,-267.5 537.95,-274.5"/>
+</g>
+<!-- Node_H -->
+<g id="node7" class="node">
+<title>Node_H</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M151.12,-475C151.12,-475 34.21,-475 34.21,-475 28.21,-475 22.21,-469 22.21,-463 22.21,-463 22.21,-439 22.21,-439 22.21,-433 28.21,-427 34.21,-427 34.21,-427 151.12,-427 151.12,-427 157.12,-427 163.12,-433 163.12,-439 163.12,-439 163.12,-463 163.12,-463 163.12,-469 157.12,-475 151.12,-475"/>
+<text xml:space="preserve" text-anchor="middle" x="92.67" y="-455.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Zone velocity</text>
+<text xml:space="preserve" text-anchor="middle" x="92.67" y="-438.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">200+ claims / 5 min</text>
+</g>
+<!-- Node_J -->
+<g id="node9" class="node">
+<title>Node_J</title>
+<polygon fill="#ffffff" stroke="#eab308" points="356.53,-529 272.52,-481 356.53,-433 440.54,-481 356.53,-529"/>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-485.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Syndicate</text>
+<text xml:space="preserve" text-anchor="middle" x="356.53" y="-468.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">flag?</text>
+</g>
+<!-- Node_H&#45;&gt;Node_J -->
+<g id="edge5" class="edge">
+<title>Node_H-&gt;Node_J</title>
+<path fill="none" stroke="#57606a" d="M163.5,-459C197.68,-462.92 239.02,-467.65 274.57,-471.72"/>
+<polygon fill="#57606a" stroke="#57606a" points="274.06,-475.19 284.39,-472.85 274.85,-468.23 274.06,-475.19"/>
+</g>
+<!-- Node_I -->
+<g id="node8" class="node">
+<title>Node_I</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M146.57,-552C146.57,-552 38.76,-552 38.76,-552 32.76,-552 26.76,-546 26.76,-540 26.76,-540 26.76,-516 26.76,-516 26.76,-510 32.76,-504 38.76,-504 38.76,-504 146.57,-504 146.57,-504 152.57,-504 158.57,-510 158.57,-516 158.57,-516 158.57,-540 158.57,-540 158.57,-546 152.57,-552 146.57,-552"/>
+<text xml:space="preserve" text-anchor="middle" x="92.67" y="-532.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Device fingerprint</text>
+<text xml:space="preserve" text-anchor="middle" x="92.67" y="-515.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">duplication</text>
+</g>
+<!-- Node_I&#45;&gt;Node_J -->
+<g id="edge6" class="edge">
+<title>Node_I-&gt;Node_J</title>
+<path fill="none" stroke="#57606a" d="M159.07,-516.26C196.02,-509.63 242.36,-501.31 280.74,-494.42"/>
+<polygon fill="#57606a" stroke="#57606a" points="281.15,-497.91 290.37,-492.69 279.91,-491.02 281.15,-497.91"/>
+</g>
+<!-- Node_J&#45;&gt;Node_F -->
+<g id="edge7" class="edge">
+<title>Node_J-&gt;Node_F</title>
+<path fill="none" stroke="#57606a" d="M407.64,-461.65C431.77,-450.92 460.26,-436.08 482.72,-418 523.21,-385.41 559.19,-336.99 580.79,-304.73"/>
+<polygon fill="#57606a" stroke="#57606a" points="583.61,-306.82 586.18,-296.54 577.76,-302.97 583.61,-306.82"/>
+<text xml:space="preserve" text-anchor="middle" x="516.33" y="-400.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00">No</text>
+</g>
+<!-- Node_REV -->
+<g id="node14" class="node">
+<title>Node_REV</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M1707.76,-416C1707.76,-416 1580.11,-416 1580.11,-416 1574.11,-416 1568.11,-410 1568.11,-404 1568.11,-404 1568.11,-392 1568.11,-392 1568.11,-386 1574.11,-380 1580.11,-380 1580.11,-380 1707.76,-380 1707.76,-380 1713.76,-380 1719.76,-386 1719.76,-392 1719.76,-392 1719.76,-404 1719.76,-404 1719.76,-410 1713.76,-416 1707.76,-416"/>
+<text xml:space="preserve" text-anchor="middle" x="1643.93" y="-393.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Reason code assigned</text>
+</g>
+<!-- Node_J&#45;&gt;Node_REV -->
+<g id="edge8" class="edge">
+<title>Node_J-&gt;Node_REV</title>
+<path fill="none" stroke="#57606a" d="M423.76,-470.96C472.85,-464.38 541.44,-457 602,-457 602,-457 602,-457 1346.86,-457 1426.17,-457 1515.18,-436.38 1574.7,-419.52"/>
+<polygon fill="#57606a" stroke="#57606a" points="1575.37,-422.97 1584.01,-416.84 1573.43,-416.25 1575.37,-422.97"/>
+<text xml:space="preserve" text-anchor="middle" x="903.51" y="-460.3" font-family="Helvetica,Arial,sans-serif" font-size="11.00">Yes</text>
+</g>
+<!-- Node_G -->
+<g id="node11" class="node">
+<title>Node_G</title>
+<polygon fill="#ffffff" stroke="#a855f7" points="781.97,-321 701.07,-273 781.97,-225 862.87,-273 781.97,-321"/>
+<text xml:space="preserve" text-anchor="middle" x="781.97" y="-277.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Anomaly</text>
+<text xml:space="preserve" text-anchor="middle" x="781.97" y="-260.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">score?</text>
+</g>
+<!-- Node_F&#45;&gt;Node_G -->
+<g id="edge14" class="edge">
+<title>Node_F-&gt;Node_G</title>
+<path fill="none" stroke="#57606a" d="M656.14,-271.59C666.96,-271.71 678.65,-271.84 690.39,-271.98"/>
+<polygon fill="#57606a" stroke="#57606a" points="690.09,-275.47 700.13,-272.09 690.17,-268.47 690.09,-275.47"/>
+</g>
+<!-- Node_HOLD -->
+<g id="node12" class="node">
+<title>Node_HOLD</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M1091.45,-299C1091.45,-299 1006.96,-299 1006.96,-299 1000.96,-299 994.96,-293 994.96,-287 994.96,-287 994.96,-263 994.96,-263 994.96,-257 1000.96,-251 1006.96,-251 1006.96,-251 1091.45,-251 1091.45,-251 1097.45,-251 1103.45,-257 1103.45,-263 1103.45,-263 1103.45,-287 1103.45,-287 1103.45,-293 1097.45,-299 1091.45,-299"/>
+<text xml:space="preserve" text-anchor="middle" x="1049.2" y="-279.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Notify partner</text>
+<text xml:space="preserve" text-anchor="middle" x="1049.2" y="-262.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">2-hr SLA</text>
+</g>
+<!-- Node_G&#45;&gt;Node_HOLD -->
+<g id="edge16" class="edge">
+<title>Node_G-&gt;Node_HOLD</title>
+<path fill="none" stroke="#57606a" d="M862.55,-273.6C901.1,-273.89 946.81,-274.24 983.23,-274.51"/>
+<polygon fill="#57606a" stroke="#57606a" points="983.17,-278.01 993.19,-274.59 983.22,-271.01 983.17,-278.01"/>
+<text xml:space="preserve" text-anchor="middle" x="903.51" y="-277.3" font-family="Helvetica,Arial,sans-serif" font-size="11.00">Medium</text>
+</g>
+<!-- Node_G&#45;&gt;Node_REV -->
+<g id="edge17" class="edge">
+<title>Node_G-&gt;Node_REV</title>
+<path fill="none" stroke="#57606a" d="M817.72,-300.36C848.86,-323.12 896.81,-353.99 944.15,-368 1156.99,-430.99 1422.16,-419.32 1556.41,-407.5"/>
+<polygon fill="#57606a" stroke="#57606a" points="1556.66,-410.99 1566.3,-406.6 1556.03,-404.02 1556.66,-410.99"/>
+<text xml:space="preserve" text-anchor="middle" x="1187.25" y="-414.7" font-family="Helvetica,Arial,sans-serif" font-size="11.00">High</text>
+</g>
+<!-- PAY1 -->
+<g id="node17" class="node">
+<title>PAY1</title>
+<ellipse fill="#22c55e" stroke="#22c55e" cx="1049.2" cy="-194" rx="105.05" ry="22.06"/>
+<text xml:space="preserve" text-anchor="middle" x="1049.2" y="-189.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="white">✓ Instant UPI payout</text>
+</g>
+<!-- Node_G&#45;&gt;PAY1 -->
+<g id="edge15" class="edge">
+<title>Node_G-&gt;PAY1</title>
+<path fill="none" stroke="#57606a" d="M833.85,-255.22C865.43,-244.44 906.94,-230.75 944.15,-220 951.63,-217.84 959.44,-215.69 967.27,-213.61"/>
+<polygon fill="#57606a" stroke="#57606a" points="968.08,-217.02 976.87,-211.1 966.31,-210.24 968.08,-217.02"/>
+<text xml:space="preserve" text-anchor="middle" x="903.51" y="-241.13" font-family="Helvetica,Arial,sans-serif" font-size="11.00">Low</text>
+</g>
+<!-- Node_WATCH -->
+<g id="node13" class="node">
+<title>Node_WATCH</title>
+<polygon fill="#ffffff" stroke="#eab308" points="1345.86,-328 1220.25,-280 1345.86,-232 1471.46,-280 1345.86,-328"/>
+<text xml:space="preserve" text-anchor="middle" x="1345.86" y="-284.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">30-min telemetry</text>
+<text xml:space="preserve" text-anchor="middle" x="1345.86" y="-267.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">consistent?</text>
+</g>
+<!-- Node_HOLD&#45;&gt;Node_WATCH -->
+<g id="edge18" class="edge">
+<title>Node_HOLD-&gt;Node_WATCH</title>
+<path fill="none" stroke="#57606a" d="M1103.9,-275.91C1134.57,-276.43 1174.49,-277.11 1212.98,-277.76"/>
+<polygon fill="#57606a" stroke="#57606a" points="1212.75,-281.26 1222.81,-277.93 1212.87,-274.26 1212.75,-281.26"/>
+</g>
+<!-- Node_WATCH&#45;&gt;Node_REV -->
+<g id="edge20" class="edge">
+<title>Node_WATCH-&gt;Node_REV</title>
+<path fill="none" stroke="#57606a" d="M1408.2,-304.45C1460.55,-325.31 1535.21,-355.07 1586.19,-375.38"/>
+<polygon fill="#57606a" stroke="#57606a" points="1584.7,-378.56 1595.28,-379.01 1587.29,-372.06 1584.7,-378.56"/>
+<text xml:space="preserve" text-anchor="middle" x="1502.01" y="-345.84" font-family="Helvetica,Arial,sans-serif" font-size="11.00">No</text>
+</g>
+<!-- PAY2 -->
+<g id="node18" class="node">
+<title>PAY2</title>
+<ellipse fill="#22c55e" stroke="#22c55e" cx="1643.93" cy="-280" rx="111.36" ry="22.06"/>
+<text xml:space="preserve" text-anchor="middle" x="1643.93" y="-275.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="white">✓ Auto-resolve payout</text>
+</g>
+<!-- Node_WATCH&#45;&gt;PAY2 -->
+<g id="edge19" class="edge">
+<title>Node_WATCH-&gt;PAY2</title>
+<path fill="none" stroke="#57606a" d="M1472.85,-280C1488.81,-280 1505.12,-280 1521.01,-280"/>
+<polygon fill="#57606a" stroke="#57606a" points="1520.98,-283.5 1530.98,-280 1520.98,-276.5 1520.98,-283.5"/>
+<text xml:space="preserve" text-anchor="middle" x="1502.01" y="-283.3" font-family="Helvetica,Arial,sans-serif" font-size="11.00">Yes</text>
+</g>
+<!-- Node_EVID -->
+<g id="node15" class="node">
+<title>Node_EVID</title>
+<path fill="#ffffff" stroke="#d0d7de" d="M1949.28,-422C1949.28,-422 1812.3,-422 1812.3,-422 1806.3,-422 1800.3,-416 1800.3,-410 1800.3,-410 1800.3,-386 1800.3,-386 1800.3,-380 1806.3,-374 1812.3,-374 1812.3,-374 1949.28,-374 1949.28,-374 1955.28,-374 1961.28,-380 1961.28,-386 1961.28,-386 1961.28,-410 1961.28,-410 1961.28,-416 1955.28,-422 1949.28,-422"/>
+<text xml:space="preserve" text-anchor="middle" x="1880.79" y="-402.2" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">Partner submits</text>
+<text xml:space="preserve" text-anchor="middle" x="1880.79" y="-385.4" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="#24292f">24-hr evidence window</text>
+</g>
+<!-- Node_REV&#45;&gt;Node_EVID -->
+<g id="edge21" class="edge">
+<title>Node_REV-&gt;Node_EVID</title>
+<path fill="none" stroke="#57606a" d="M1720.21,-398C1742.02,-398 1766.06,-398 1788.72,-398"/>
+<polygon fill="#57606a" stroke="#57606a" points="1788.56,-401.5 1798.56,-398 1788.56,-394.5 1788.56,-401.5"/>
+</g>
+<!-- Node_ANALYST -->
+<g id="node16" class="node">
+<title>Node_ANALYST</title>
+<ellipse fill="#0ea5e9" stroke="#0ea5e9" cx="2121.76" cy="-398" rx="115.49" ry="22.06"/>
+<text xml:space="preserve" text-anchor="middle" x="2121.76" y="-393.8" font-family="Helvetica,Arial,sans-serif" font-size="14.00" fill="white">Human analyst decision</text>
+</g>
+<!-- Node_EVID&#45;&gt;Node_ANALYST -->
+<g id="edge22" class="edge">
+<title>Node_EVID-&gt;Node_ANALYST</title>
+<path fill="none" stroke="#57606a" d="M1961.7,-398C1972.38,-398 1983.54,-398 1994.78,-398"/>
+<polygon fill="#57606a" stroke="#57606a" points="1994.52,-401.5 2004.52,-398 1994.52,-394.5 1994.52,-401.5"/>
+</g>
+</g>
+</svg>
