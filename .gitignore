@@ -1,0 +1,38 @@
+﻿# OS / editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Sensitive/local files
+.env
+.env.*
+*.pem
+*.key
+*.log
+
+# Archives / local bundles
+*.zip
+
+# Flutter generated
+cashurance/.dart_tool/
+cashurance/build/
+cashurance/.metadata
+cashurance/.firebase/
+cashurance/.flutter-plugins-dependencies
+
+# Backend generated
+cashurance-backend/node_modules/
+cashurance-backend/node/node_modules/
+cashurance-backend/node/uploads/
+cashurance-backend/node/database.sqlite
+
+# Python generated
+cashurance-backend/python/.venv/
+cashurance-backend/python/venv/
+cashurance-backend/python/__pycache__/
+cashurance-backend/python/app/__pycache__/
+**/__pycache__/
+*.pyc
+*.sqlite
+*.db

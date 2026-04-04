@@ -1,0 +1,120 @@
+CashUrance UI Overhaul — Winter Chill Theme
+Complete visual overhaul of all Flutter screens using the Winter Chill color palette, replacing the current blue/black/white scheme with a cohesive teal-based design system.
+
+Color Palette
+Token	Hex	Usage
+Ice	#B8E3E9	Light backgrounds, chips, highlights, badges
+Sage	#93B1B5	Muted text, borders, disabled states, secondary fills
+Teal	#4F7C82	Primary buttons, active indicators, accents
+Deep	#0B2E33	Dark backgrounds, text, hero sections, nav bar
+Proposed Changes
+Design System Foundation
+[MODIFY] 
+theme.dart
+Replace all color constants: primary → #4F7C82, primaryContainer → #4F7C82, primaryFixed → #B8E3E9, etc.
+New surface colors derived from Winter Chill palette (light icy whites, tinted surfaces)
+Update successGreen, warningOrange, rejectRed to work harmoniously with teal tones
+Update FilledButton, OutlinedButton, InputDecoration, Card, Chip, NavigationBar, and AppBar theme data
+Update CashuranceCard and SectionLabel widget colors
+[MODIFY] 
+pubspec.yaml
+Add assets: section referencing assets/logo.png
+Entry & Auth Flow (5 screens)
+[MODIFY] 
+main.dart
+Update web container background from #111827 to #0B2E33
+Update inner DecoratedBox to use new surface color
+[MODIFY] 
+create_account_screen.dart
+Full redesign as splash/entry screen: Deep teal (#0B2E33) full-bleed background
+Add centered logo.png (from assets) with a subtle glow/shadow effect
+Tagline "Insurance Powered by Intelligence" below logo
+Animated stat cards with frosted glass effect using #B8E3E9 at low opacity
+"Get Started" and "Sign In" buttons in teal/ice palette
+Remove old black square logo, replace with actual logo.png
+[MODIFY] 
+login_screen.dart
+Dark header panel: gradient from #0B2E33 → #4F7C82
+Form area: light icy background #F0F8F9 (derived from ice)
+Buttons: teal primary, sage outlined
+Update all inline colors to use Winter Chill tokens
+Backend status indicator uses teal for connected, red for disconnected
+[MODIFY] 
+personal_details_screen.dart
+Sidebar: light ice blue tint instead of #FAFAFA
+Form inputs: teal focus borders
+"Continue" button: deep teal background, white text
+Step indicator: teal themed
+[MODIFY] 
+identity_verification_screen.dart
+Same teal-themed inputs and buttons
+ID card upload zones: ice blue fill with teal border on selection
+Bottom sheet for source selection: teal accents
+[MODIFY] 
+platform_integration_screen.dart
+Same consistent teal design language
+Success dialog: teal check icon, ice background accents
+In-App Screens (6 screens)
+[MODIFY] 
+app_shell.dart
+AppBar: uses logo.png instead of shield icon, teal-tinted zone badge
+NavigationBar: deep teal background, ice indicator, sage icons
+Error/loading states use teal palette
+[MODIFY] 
+home_screen.dart
+Welcome band gradient: #0B2E33 → #4F7C82
+Quick action tiles: ice background, teal icons
+All cards: frosted white with subtle teal borders
+Premium Intelligence, Payment Summary, Risk Feed, Earning Intent cards: teal accents throughout
+[MODIFY] 
+zone_setup_screen.dart
+Map marker: teal colored
+Info boxes: ice blue backgrounds
+Confirm button: deep teal
+[MODIFY] 
+policy_purchase_screen.dart
+Premium breakdown rows: teal for totals
+Info banner: ice blue
+Confirm & Pay button: deep teal
+[MODIFY] 
+trigger_alerts_screen.dart
+Chips: teal selected, sage unselected
+Alert cards: teal borders and accents
+Severity badges: adjusted to harmonize with teal palette
+[MODIFY] 
+payout_history_screen.dart
+Summary card: teal icon background
+Status chips and expansion tiles: teal accents
+[MODIFY] 
+profile_screen.dart
+Avatar: ice blue background, teal text
+Section labels: teal colored
+Stat cards: ice/teal tinted
+Switch toggles: teal active color
+Logout button: outlined in teal
+Shared Widgets (3 files)
+[MODIFY] 
+app_bar.dart
+Shield icon → teal color
+Background: white/ice tinted
+[MODIFY] 
+progress_footer.dart
+Progress bar: teal instead of black
+Step labels: deep teal text
+Background: ice-tinted white
+[MODIFY] 
+step_input.dart
+Focus border: teal
+Label color: sage/muted teal
+Key Design Principles
+Entry screen gets the biggest transformation — logo-centric dark teal splash
+Dark panels use #0B2E33 with gradient blends to #4F7C82
+Light surfaces use white tinted with ice (#F4FAFB)
+Primary actions are #4F7C82 (teal)
+Highlights/chips/badges use #B8E3E9 (ice)
+Muted/secondary elements use #93B1B5 (sage)
+All functional colors (success, warning, error) are retained but slightly adjusted for harmony
+Verification Plan
+Manual Verification
+flutter analyze — ensure no lint errors
+Visual check of every screen in order: Entry → Login → Personal → Identity → Platform → Home → Policy → Alerts → History → Profile

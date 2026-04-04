@@ -1,0 +1,109 @@
+1. What Was Implemented
+
+Backend split into Node and Python runtimes under one backend root.
+One-command backend startup created to run both services together.
+Python ML premium scoring service integrated into Node backend.
+Mobile app registration simplified by removing platform and UPI requirements.
+Login updated to accept only 10-digit phone number and show test credentials hint.
+Mobile app default backend URL updated to your droplet IP.
+Cloudflare quick tunnel flow used to provide HTTPS for Firebase web compatibility.
+2. Current Backend Structure
+
+Backend root: cashurance-backend
+Node runtime: node
+Python runtime: python
+Unified launcher: start-backends.js
+Root orchestrator package: package.json
+3. Key Code Changes
+
+ML service integration:
+mlPremiumService.js
+appController.js
+Python premium engine:
+main.py
+premium_calculation.py
+requirements.txt
+Mobile auth/registration:
+platform_integration_screen.dart
+login_screen.dart
+api_service.dart
+Launcher reliability fixes for Ubuntu:
+Uses python3 and creates .venv automatically.
+Installs Python requirements inside .venv.
+Avoids system pip issues on Ubuntu 24 (PEP 668).
+4. Current Mobile Defaults
+
+API default points to droplet backend:
+api_service.dart
+Login validation:
+Phone must be exactly 10 digits.
+Test hint shown on login screen:
+Phone: 9999999999
+Password: abcdef
+Registration Step 3:
+Worker ID required
+Platform and UPI restrictions removed in UI flow
+5. Known Deployment Pitfall You Hit
+
+If zip is created from a flat file list, folder structure is lost.
+Backend must keep this structure after unzip:
+package.json
+node/
+python/
+scripts/
+6. Correct Packaging Method (Windows)
+
+Create temp folder that preserves backend directory tree.
+Remove caches from temp.
+Zip the temp backend folder, not individual files.
+7. Droplet Runtime Commands (Working Path)
+
+Extract to /opt/cashurance-backend with proper structure.
+Install dependencies:
+npm install
+python3 -m venv python/.venv
+python/.venv/bin/pip install -r python/requirements.txt
+Start:
+npm start
+Keep alive:
+pm2 start npm --name cashurance-backend -- start
+pm2 save
+pm2 startup
+8. Health Checks
+
+Local backend check:
+curl http://127.0.0.1:3000/health
+Public backend check:
+curl http://139.59.12.72:3000/health
+PM2 checks:
+pm2 status
+pm2 logs cashurance-backend --lines 100
+9. HTTPS Without Domain (What You Used)
+
+Quick tunnel command:
+cloudflared tunnel --url http://127.0.0.1:3000
+Current working tunnel URL from your logs:
+https://vegetation-dee-adjustable-treaty.trycloudflare.com
+Run tunnel persistently:
+pm2 start "cloudflared tunnel --url http://127.0.0.1:3000" --name cf-tunnel
+pm2 save
+Check tunnel logs:
+pm2 logs cf-tunnel --lines 50
+10. Firebase Web Deploy Flow
+
+Build Flutter web with HTTPS API URL:
+flutter build web --release --dart-define=API_BASE_URL=https://vegetation-dee-adjustable-treaty.trycloudflare.com
+Deploy:
+firebase deploy
+11. Important Limits
+
+Firebase-hosted web requires HTTPS backend due to browser mixed-content policy.
+Cloudflare quick tunnel URL can change after restart.
+If tunnel URL changes, rebuild web with the new URL.
+12. Ready-to-Use New Chat Prompt
+Paste this in future chats:
+
+I have a Flutter app in cashurance, backend in cashurance-backend, with split runtimes in node and python. Use start-backends.js for one-command startup. Python runs in venv. Mobile auth/registration changes are in login_screen.dart and platform_integration_screen.dart. API default is in api_service.dart. For web deploy I use Cloudflare quick tunnel and Firebase Hosting.
+
+Set-Location "G:\Dev Trail\v1"
+.\update_all_from_pc.ps1 -ServerIp 139.59.12.72 -ApiBaseUrl https://vegetation-dee-adjustable-treaty.trycloudflare.com

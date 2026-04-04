@@ -1,0 +1,21 @@
+{
+  "name": "cashurance-backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "scripts/start-backends.js",
+  "scripts": {
+    "start": "node scripts/start-backends.js",
+    "start:node": "node node/server.js",
+    "start:python": "python -m uvicorn main:app --host 127.0.0.1 --port 8001 --app-dir python",
+    "install:python": "python -m pip install -r python/requirements.txt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Cashurance backend runner (Node + Python)",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  }
+}
