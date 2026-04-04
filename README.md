@@ -193,7 +193,9 @@ This cap logic remains aligned with pool sustainability and anti-abuse goals.
 
 ### Data and Signals
 - Open-Meteo live weather/air quality feeds (trigger derivation)
-
+- Traffic API feeds (integration-ready): Google Maps Traffic, TomTom Traffic, HERE Traffic
+- Strike/disruption signal APIs (integration-ready): city incident/news event ingestion for protest, strike, and shutdown alerts
+  
 ### Deployment and Infrastructure
 - DigitalOcean Droplet (Ubuntu Linux runtime)
 - PM2 (process supervision for backend services)
