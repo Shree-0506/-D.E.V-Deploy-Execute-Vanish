@@ -188,7 +188,7 @@ This cap logic remains aligned with pool sustainability and anti-abuse goals.
 - Python 3 premium engine with FastAPI + Uvicorn
 - Node-Python orchestration via `scripts/start-backends.js`
 
-### Admin App
+### Admin App (In-Progress)
 - React + Vite (admin interface stack)
 
 ### Data and Signals
