@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1145pt" height="868pt" viewBox="0.00 0.00 1145.00 868.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 831.67)">
+<title>FraudPreventionFlow</title>
+<polygon fill="white" stroke="none" points="-36,36 -36,-831.67 1108.94,-831.67 1108.94,36 -36,36"/>
+<g id="clust1" class="cluster">
+<title>cluster_pillars</title>
+<path fill="none" stroke="#94a3b8" stroke-dasharray="5,2" d="M337.94,-540.8C337.94,-540.8 1052.94,-540.8 1052.94,-540.8 1058.94,-540.8 1064.94,-546.8 1064.94,-552.8 1064.94,-552.8 1064.94,-653.6 1064.94,-653.6 1064.94,-659.6 1058.94,-665.6 1052.94,-665.6 1052.94,-665.6 337.94,-665.6 337.94,-665.6 331.94,-665.6 325.94,-659.6 325.94,-653.6 325.94,-653.6 325.94,-552.8 325.94,-552.8 325.94,-546.8 331.94,-540.8 337.94,-540.8"/>
+<text xml:space="preserve" text-anchor="middle" x="695.44" y="-649" font-family="Arial" font-size="14.00" fill="#475569">The 3 Pillars of Verification (Multi-Signal Input)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_engines</title>
+<path fill="none" stroke="#cbd5e1" d="M262.94,-280C262.94,-280 775.94,-280 775.94,-280 781.94,-280 787.94,-286 787.94,-292 787.94,-292 787.94,-361.6 787.94,-361.6 787.94,-367.6 781.94,-373.6 775.94,-373.6 775.94,-373.6 262.94,-373.6 262.94,-373.6 256.94,-373.6 250.94,-367.6 250.94,-361.6 250.94,-361.6 250.94,-292 250.94,-292 250.94,-286 256.94,-280 262.94,-280"/>
+<text xml:space="preserve" text-anchor="middle" x="519.44" y="-357" font-family="Arial" font-size="14.00" fill="#475569">Evaluation Engines</text>
+</g>
+<!-- Weather -->
+<g id="node1" class="node">
+<title>Weather</title>
+<ellipse fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" cx="518.94" cy="-758.34" rx="159.32" ry="37.34"/>
+<text xml:space="preserve" text-anchor="middle" x="518.94" y="-762.24" font-family="Arial" font-size="13.00">Weather Disruption Trigger</text>
+<text xml:space="preserve" text-anchor="middle" x="518.94" y="-746.64" font-family="Arial" font-size="13.00">(e.g., Severe Waterlogging Alert)</text>
+</g>
+<!-- Grace -->
+<g id="node2" class="node">
+<title>Grace</title>
+<polygon fill="#fef08a" stroke="#ca8a04" points="269.88,-617.2 0,-617.2 0,-564.4 275.88,-564.4 275.88,-611.2 269.88,-617.2"/>
+<polyline fill="none" stroke="#ca8a04" points="269.88,-617.2 269.88,-611.2"/>
+<polyline fill="none" stroke="#ca8a04" points="275.88,-611.2 269.88,-611.2"/>
+<text xml:space="preserve" text-anchor="middle" x="137.94" y="-594.7" font-family="Arial" font-size="13.00">15-Min GPS Grace Period</text>
+<text xml:space="preserve" text-anchor="middle" x="137.94" y="-579.1" font-family="Arial" font-size="13.00">(Utilizes cached location if network drops)</text>
+</g>
+<!-- Weather&#45;&gt;Grace -->
+<g id="edge1" class="edge">
+<title>Weather-&gt;Grace</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="5,2" d="M443.67,-724.63C375.12,-694.85 274.68,-651.21 207.86,-622.18"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="209.67,-619.15 199.1,-618.37 206.88,-625.57 209.67,-619.15"/>
+<text xml:space="preserve" text-anchor="middle" x="387.26" y="-677.2" font-family="Arial" font-size="12.00"> Network loss</text>
+</g>
+<!-- P1 -->
+<g id="node3" class="node">
+<title>P1</title>
+<path fill="#eff6ff" stroke="#3b82f6" d="M529.91,-632.8C529.91,-632.8 345.96,-632.8 345.96,-632.8 339.96,-632.8 333.96,-626.8 333.96,-620.8 333.96,-620.8 333.96,-560.8 333.96,-560.8 333.96,-554.8 339.96,-548.8 345.96,-548.8 345.96,-548.8 529.91,-548.8 529.91,-548.8 535.91,-548.8 541.91,-554.8 541.91,-560.8 541.91,-560.8 541.91,-620.8 541.91,-620.8 541.91,-626.8 535.91,-632.8 529.91,-632.8"/>
+<text xml:space="preserve" text-anchor="middle" x="437.94" y="-610.3" font-family="Arial" font-size="13.00">1. Location &amp; Movement</text>
+<text xml:space="preserve" text-anchor="middle" x="437.94" y="-594.7" font-family="Arial" font-size="13.00">• Trajectory Continuity</text>
+<text xml:space="preserve" text-anchor="middle" x="437.94" y="-579.1" font-family="Arial" font-size="13.00">• Speed &amp; Route Plausibility</text>
+<text xml:space="preserve" text-anchor="middle" x="437.94" y="-563.5" font-family="Arial" font-size="13.00">• Accelerometer / Gyroscope</text>
+</g>
+<!-- Weather&#45;&gt;P1 -->
+<g id="edge2" class="edge">
+<title>Weather-&gt;P1</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M500.96,-720.6C489.87,-697.93 475.47,-668.5 463.24,-643.5"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="466.48,-642.17 458.94,-634.72 460.19,-645.24 466.48,-642.17"/>
+</g>
+<!-- P2 -->
+<g id="node4" class="node">
+<title>P2</title>
+<path fill="#eff6ff" stroke="#3b82f6" d="M787.58,-632.8C787.58,-632.8 612.3,-632.8 612.3,-632.8 606.3,-632.8 600.3,-626.8 600.3,-620.8 600.3,-620.8 600.3,-560.8 600.3,-560.8 600.3,-554.8 606.3,-548.8 612.3,-548.8 612.3,-548.8 787.58,-548.8 787.58,-548.8 793.58,-548.8 799.58,-554.8 799.58,-560.8 799.58,-560.8 799.58,-620.8 799.58,-620.8 799.58,-626.8 793.58,-632.8 787.58,-632.8"/>
+<text xml:space="preserve" text-anchor="middle" x="699.94" y="-610.3" font-family="Arial" font-size="13.00">2. Platform Behavior</text>
+<text xml:space="preserve" text-anchor="middle" x="699.94" y="-594.7" font-family="Arial" font-size="13.00">• App Foreground Activity</text>
+<text xml:space="preserve" text-anchor="middle" x="699.94" y="-579.1" font-family="Arial" font-size="13.00">• Order Acceptance History</text>
+<text xml:space="preserve" text-anchor="middle" x="699.94" y="-563.5" font-family="Arial" font-size="13.00">• Timestamp Consistency</text>
+</g>
+<!-- Weather&#45;&gt;P2 -->
+<g id="edge3" class="edge">
+<title>Weather-&gt;P2</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M558.21,-721.42C583.94,-697.89 617.89,-666.84 646.12,-641.02"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="648.32,-643.75 653.34,-634.42 643.6,-638.58 648.32,-643.75"/>
+</g>
+<!-- P3 -->
+<g id="node5" class="node">
+<title>P3</title>
+<path fill="#eff6ff" stroke="#3b82f6" d="M1044.55,-632.8C1044.55,-632.8 869.32,-632.8 869.32,-632.8 863.32,-632.8 857.32,-626.8 857.32,-620.8 857.32,-620.8 857.32,-560.8 857.32,-560.8 857.32,-554.8 863.32,-548.8 869.32,-548.8 869.32,-548.8 1044.55,-548.8 1044.55,-548.8 1050.55,-548.8 1056.55,-554.8 1056.55,-560.8 1056.55,-560.8 1056.55,-620.8 1056.55,-620.8 1056.55,-626.8 1050.55,-632.8 1044.55,-632.8"/>
+<text xml:space="preserve" text-anchor="middle" x="956.94" y="-610.3" font-family="Arial" font-size="13.00">3. Device &amp; Network</text>
+<text xml:space="preserve" text-anchor="middle" x="956.94" y="-594.7" font-family="Arial" font-size="13.00">• Device Fingerprint</text>
+<text xml:space="preserve" text-anchor="middle" x="956.94" y="-579.1" font-family="Arial" font-size="13.00">• Network Type (Wi-Fi/Cell)</text>
+<text xml:space="preserve" text-anchor="middle" x="956.94" y="-563.5" font-family="Arial" font-size="13.00">• Cell Triangulation Delta</text>
+</g>
+<!-- Weather&#45;&gt;P3 -->
+<g id="edge4" class="edge">
+<title>Weather-&gt;P3</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M630.92,-731.02C690.85,-715.25 765.24,-692.93 828.94,-665.6 846.67,-657.99 865.04,-648.48 882.13,-638.84"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="883.53,-642.08 890.46,-634.07 880.05,-636 883.53,-642.08"/>
+</g>
+<!-- Vector -->
+<g id="node6" class="node">
+<title>Vector</title>
+<polygon fill="#f1f5f9" stroke="#cbd5e1" points="665.92,-481.8 662.92,-485.8 641.92,-485.8 638.92,-481.8 371.96,-481.8 371.96,-429 665.92,-429 665.92,-481.8"/>
+<text xml:space="preserve" text-anchor="middle" x="518.94" y="-459.3" font-family="Arial" font-size="13.00">Compile Combined Feature Vector</text>
+<text xml:space="preserve" text-anchor="middle" x="518.94" y="-443.7" font-family="Arial" font-size="13.00">(No single signal causes automatic rejection)</text>
+</g>
+<!-- Grace&#45;&gt;Vector -->
+<g id="edge5" class="edge">
+<title>Grace-&gt;Vector</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="5,2" d="M211.85,-563.92C275.6,-541.6 367.66,-509.37 434.34,-486.02"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="435.24,-489.42 443.52,-482.81 432.92,-482.81 435.24,-489.42"/>
+</g>
+<!-- P1&#45;&gt;Vector -->
+<g id="edge6" class="edge">
+<title>P1-&gt;Vector</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M463.12,-548.32C474.15,-530.16 486.95,-509.08 497.51,-491.69"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="500.3,-493.85 502.5,-483.48 494.31,-490.21 500.3,-493.85"/>
+</g>
+<!-- P2&#45;&gt;Vector -->
+<g id="edge7" class="edge">
+<title>P2-&gt;Vector</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M643.66,-548.32C617.73,-529.21 587.41,-506.87 563.16,-488.99"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="565.43,-486.32 555.31,-483.2 561.28,-491.96 565.43,-486.32"/>
+</g>
+<!-- P3&#45;&gt;Vector -->
+<g id="edge8" class="edge">
+<title>P3-&gt;Vector</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M857.01,-550.45C847.57,-547.06 838.1,-543.79 828.94,-540.8 765.55,-520.1 693.77,-500.32 635.25,-485.13"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="636.42,-481.82 625.86,-482.7 634.67,-488.59 636.42,-481.82"/>
+</g>
+<!-- Syndicate -->
+<g id="node7" class="node">
+<title>Syndicate</title>
+<polygon fill="#fee2e2" stroke="#ef4444" points="490.47,-340.8 259.41,-340.8 259.41,-336.8 255.41,-336.8 255.41,-332.8 259.41,-332.8 259.41,-296 255.41,-296 255.41,-292 259.41,-292 259.41,-288 490.47,-288 490.47,-340.8"/>
+<polyline fill="none" stroke="#ef4444" points="259.41,-336.8 263.41,-336.8 263.41,-332.8 259.41,-332.8"/>
+<polyline fill="none" stroke="#ef4444" points="259.41,-296 263.41,-296 263.41,-292 259.41,-292"/>
+<text xml:space="preserve" text-anchor="middle" x="374.94" y="-318.3" font-family="Arial" font-size="13.00">Syndicate Detection</text>
+<text xml:space="preserve" text-anchor="middle" x="374.94" y="-302.7" font-family="Arial" font-size="13.00">(Cluster Analysis for Fraud Rings)</text>
+</g>
+<!-- Vector&#45;&gt;Syndicate -->
+<g id="edge9" class="edge">
+<title>Vector-&gt;Syndicate</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M492.19,-428.58C468.95,-406.15 435.14,-373.51 409.79,-349.04"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="412.48,-346.77 402.85,-342.34 407.61,-351.81 412.48,-346.77"/>
+<text xml:space="preserve" text-anchor="middle" x="494.91" y="-385.2" font-family="Arial" font-size="12.00"> Cluster Check</text>
+</g>
+<!-- IsoForest -->
+<g id="node8" class="node">
+<title>IsoForest</title>
+<polygon fill="#f3e8ff" stroke="#a855f7" points="779.49,-340.8 548.39,-340.8 548.39,-336.8 544.39,-336.8 544.39,-332.8 548.39,-332.8 548.39,-296 544.39,-296 544.39,-292 548.39,-292 548.39,-288 779.49,-288 779.49,-340.8"/>
+<polyline fill="none" stroke="#a855f7" points="548.39,-336.8 552.39,-336.8 552.39,-332.8 548.39,-332.8"/>
+<polyline fill="none" stroke="#a855f7" points="548.39,-296 552.39,-296 552.39,-292 548.39,-292"/>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-318.3" font-family="Arial" font-size="13.00">Isolation Forest Model</text>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-302.7" font-family="Arial" font-size="13.00">(Evaluates Behavioral Anomalies)</text>
+</g>
+<!-- Vector&#45;&gt;IsoForest -->
+<g id="edge10" class="edge">
+<title>Vector-&gt;IsoForest</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M545.87,-428.58C569.27,-406.15 603.32,-373.51 628.85,-349.04"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="631.04,-351.78 635.84,-342.34 626.2,-346.73 631.04,-351.78"/>
+<text xml:space="preserve" text-anchor="middle" x="640.13" y="-385.2" font-family="Arial" font-size="12.00"> Behavioral Check</text>
+</g>
+<!-- Decision -->
+<g id="node9" class="node">
+<title>Decision</title>
+<path fill="#f8fafc" stroke="#cbd5e1" d="M652.44,-204.17C652.44,-204.17 550.58,-173.83 550.58,-173.83 544.83,-172.11 544.83,-168.69 550.58,-166.97 550.58,-166.97 652.44,-136.63 652.44,-136.63 658.19,-134.91 669.69,-134.91 675.44,-136.63 675.44,-136.63 777.29,-166.97 777.29,-166.97 783.04,-168.69 783.04,-172.11 777.29,-173.83 777.29,-173.83 675.44,-204.17 675.44,-204.17 669.69,-205.89 658.19,-205.89 652.44,-204.17"/>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-166.5" font-family="Arial" font-size="13.00">Decision Matrix</text>
+</g>
+<!-- Syndicate&#45;&gt;Decision -->
+<g id="edge11" class="edge">
+<title>Syndicate-&gt;Decision</title>
+<path fill="none" stroke="#22c55e" stroke-width="1.2" d="M427.61,-287.52C478.48,-262.52 555.28,-224.79 607.42,-199.17"/>
+<polygon fill="#22c55e" stroke="#22c55e" stroke-width="1.2" points="608.76,-202.41 616.2,-194.86 605.68,-196.13 608.76,-202.41"/>
+<text xml:space="preserve" text-anchor="middle" x="535.44" y="-244.2" font-family="Arial" font-size="12.00"> Clear</text>
+</g>
+<!-- Review -->
+<g id="node11" class="node">
+<title>Review</title>
+<path fill="#fecaca" stroke="#dc2626" stroke-width="2" d="M455.17,-52.8C455.17,-52.8 204.71,-52.8 204.71,-52.8 198.71,-52.8 192.71,-46.8 192.71,-40.8 192.71,-40.8 192.71,-12 192.71,-12 192.71,-6 198.71,0 204.71,0 204.71,0 455.17,0 455.17,0 461.17,0 467.17,-6 467.17,-12 467.17,-12 467.17,-40.8 467.17,-40.8 467.17,-46.8 461.17,-52.8 455.17,-52.8"/>
+<text xml:space="preserve" text-anchor="middle" x="329.94" y="-30.3" font-family="Arial" font-size="13.00" fill="#7f1d1d">Flag for Manual Review</text>
+<text xml:space="preserve" text-anchor="middle" x="329.94" y="-14.7" font-family="Arial" font-size="13.00" fill="#7f1d1d">(Anomalous pattern or coordinated spike)</text>
+</g>
+<!-- Syndicate&#45;&gt;Review -->
+<g id="edge12" class="edge">
+<title>Syndicate-&gt;Review</title>
+<path fill="none" stroke="#ef4444" stroke-width="1.2" d="M370.28,-287.78C366.44,-266.37 360.92,-235.03 356.51,-207.6 348.57,-158.23 340.3,-101.1 335.14,-64.63"/>
+<polygon fill="#ef4444" stroke="#ef4444" stroke-width="1.2" points="338.63,-64.31 333.77,-54.89 331.7,-65.28 338.63,-64.31"/>
+<text xml:space="preserve" text-anchor="middle" x="433.23" y="-166.8" font-family="Arial" font-size="12.00" fill="#ef4444"> Coordinated Spike Detected</text>
+</g>
+<!-- IsoForest&#45;&gt;Decision -->
+<g id="edge13" class="edge">
+<title>IsoForest-&gt;Decision</title>
+<path fill="none" stroke="#475569" stroke-width="1.2" d="M663.94,-287.68C663.94,-268.7 663.94,-242.29 663.94,-219.44"/>
+<polygon fill="#475569" stroke="#475569" stroke-width="1.2" points="667.44,-219.69 663.94,-209.69 660.44,-219.69 667.44,-219.69"/>
+<text xml:space="preserve" text-anchor="middle" x="706.29" y="-244.2" font-family="Arial" font-size="12.00"> Anomaly Score</text>
+</g>
+<!-- Payout -->
+<g id="node10" class="node">
+<title>Payout</title>
+<path fill="#bbf7d0" stroke="#16a34a" stroke-width="2" d="M789.51,-52.8C789.51,-52.8 538.36,-52.8 538.36,-52.8 532.36,-52.8 526.36,-46.8 526.36,-40.8 526.36,-40.8 526.36,-12 526.36,-12 526.36,-6 532.36,0 538.36,0 538.36,0 789.51,0 789.51,0 795.51,0 801.51,-6 801.51,-12 801.51,-12 801.51,-40.8 801.51,-40.8 801.51,-46.8 795.51,-52.8 789.51,-52.8"/>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-30.3" font-family="Arial" font-size="13.00" fill="#065f46">Instant UPI Payout</text>
+<text xml:space="preserve" text-anchor="middle" x="663.94" y="-14.7" font-family="Arial" font-size="13.00" fill="#065f46">(Overall pattern indicates legitimate work)</text>
+</g>
+<!-- Decision&#45;&gt;Payout -->
+<g id="edge14" class="edge">
+<title>Decision-&gt;Payout</title>
+<path fill="none" stroke="#22c55e" stroke-width="1.2" d="M663.94,-132.83C663.94,-111.95 663.94,-85.82 663.94,-64.8"/>
+<polygon fill="#22c55e" stroke="#22c55e" stroke-width="1.2" points="667.44,-64.91 663.94,-54.91 660.44,-64.91 667.44,-64.91"/>
+<text xml:space="preserve" text-anchor="middle" x="693.29" y="-89.4" font-family="Arial" font-size="12.00" fill="#16a34a"> Legitimate</text>
+</g>
+<!-- Decision&#45;&gt;Review -->
+<g id="edge15" class="edge">
+<title>Decision-&gt;Review</title>
+<path fill="none" stroke="#ef4444" stroke-width="1.2" d="M613.21,-147.83C556.8,-123.85 465.25,-84.93 401.55,-57.85"/>
+<polygon fill="#ef4444" stroke="#ef4444" stroke-width="1.2" points="403.03,-54.67 392.46,-53.98 400.29,-61.12 403.03,-54.67"/>
+<text xml:space="preserve" text-anchor="middle" x="546.96" y="-89.4" font-family="Arial" font-size="12.00" fill="#dc2626"> Highly Anomalous</text>
+</g>
+</g>
+</svg>
